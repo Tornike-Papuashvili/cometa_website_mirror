@@ -634,15 +634,72 @@ ul.nostyle i {
   -webkit-transition: border-color 400ms;
 }
 
+
+/* Mobile */
 @media(max-width:767px) {
   #get-in-touch .container .row .row {
     margin: unset;
     margin-top: 30px;
     padding: 10px;
   }
+
+  .advantage {
+    display: unset;
+  }
+
+  .spec-list {
+    display: contents;
+  }
 }
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.content h1 {
+  color: white;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
 #get-in-touch .amvara .team-img {
   margin: -15px -15px 0 -15px;
+}
+
+@media(min-width:767px) {
+  #pricing .container .row {
+    display: flex;
+  }
+
+  #pricing .container .row .col-sm-4 {
+    flex: 1 50%;
+  }
+
+  #pricing .container .row .col-sm-4 div{
+    height: 100%;
+  }
+
+  #pricing .container .row .col-sm-4 div ul{
+    height: 100%;
+  }
 }
 
 .team-info h3{ margin-bottom:0px;}
