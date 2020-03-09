@@ -36,6 +36,11 @@ h6 {
   height: 58px;
 }
 
+.animated-number:hover {
+  transform: scale(1.15, 1.15);
+  opacity: 1;
+}
+
 @font-face {
 	font-family: 'Roboto-regular';
 	src: url('../fonts/Roboto-Regular.eot');
@@ -649,6 +654,15 @@ ul.nostyle i {
 
   .spec-list {
     display: contents;
+  }
+
+  .portfolio-item {
+    width: 33% !important;
+    padding: 1rem !important;
+  }
+
+  .portfolio-info {
+    display: none;
   }
 }
 
