@@ -12,4 +12,4 @@ services:
       working_dir: /cometa_website
       ports:
         - "8010:80"
-      command: [nginx-debug, '-g', 'daemon off;']
+      command: bash /cometa_website/start.sh
