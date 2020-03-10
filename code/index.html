@@ -538,13 +538,13 @@
                                 <div class="plan-name"> Online </div>
                                 <div class="plan-price"> FREE <span>Limited</span></div>
                             </li>
-                            <li>1 test</li>
-                            <li>500 executions</li>
+                            <li>1 Test</li>
+                            <li>500 Executions</li>
                             <li><br></li>
                             <li><br></li>
                             <li><br></li>
                             <li><br></li>
-                            <li class="plan-purchase"><a class="btn btn-primary" href="https://cometa.amvara.de" target="_blank">TEST NOW</a></li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="https://cometa.amvara.de" target="_blank">TRY NOW</a></li>
                         </ul>
                     </div>
                 </div>
@@ -669,21 +669,21 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <form action="php/mail.php" method="post" name="contact-form" id="main-contact-form">
+                    <form action="./php/mail.php" method="post" name="contact-form" id="main-contact-form">
                         <div class="form-group">
-                            <input type="text" required placeholder="Name" class="form-control" name="name">
+                            <input type="text" required placeholder="Name" class="form-control" id="name" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" required placeholder="Email" class="form-control" name="email">
+                            <input type="email" required placeholder="Email" class="form-control" id="email" name="email">
                         </div>
                         <div class="form-group">
-                            <input type="text" required placeholder="Subject" class="form-control" name="subject">
+                            <input type="text" required placeholder="Subject" class="form-control" id="subject" name="subject">
                         </div>
                         <div class="form-group">
-                            <textarea required placeholder="Message" rows="8" class="form-control"
+                            <textarea required placeholder="Message" rows="8" class="form-control" id="message"
                                 name="message"></textarea>
                         </div>
-                        <button class="btn btn-primary" type="submit">SUBMIT</button>
+                        <button class="btn btn-primary" type="submit" onclick="document.getElementById('contact-form').submit();">SUBMIT</button>
                     </form></a>
                 </div>
             </div>
@@ -757,6 +757,33 @@
                 btn.innerHTML = "Play";
             }
         }
+    </script>
+    <script>
+        document.getElementById('status').innerHTML = "Sending...";
+        formData = {
+            'name'     : $('input[name=name]').val(),
+            'email'    : $('input[name=email]').val(),
+            'subject'  : $('input[name=subject]').val(),
+            'message'  : $('textarea[name=message]').val()
+        };
+
+
+        $.ajax({
+            url : "./php/mail.php",
+            type: "POST",
+            data : formData,
+            success: function(data, textStatus, jqXHR)
+            {
+
+            $('#status').text(data.message);
+            if (data.code) //If mail was sent successfully, reset the form.
+                $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+            },
+                error: function (jqXHR, textStatus, errorThrown)
+            {
+                $('#status').text(jqXHR);
+            }
+        });
     </script>
 </body>
 </html>
