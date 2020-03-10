@@ -4,5 +4,5 @@ stages:
 stage_deployment:
   stage: deploy
   script:
-    - sudo mkdir -p /home/amvara/projects/cometa/cometa_website || true
-    - sudo cp -rp . /home/amvara/projects/cometa/cometa_website/.
+    - sudo mkdir -p /home/amvara/projects/cometa_website || true
+    - sudo cp -rp . /home/amvara/projects/cometa_website/.

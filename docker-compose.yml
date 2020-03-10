@@ -8,8 +8,8 @@ services:
       volumes:
         - ./:/cometa_website
         - ./default.conf:/etc/nginx/conf.d/default.conf
-        - "/home/amvara/projects/cometa/cometa_website/code/.:/usr/share/nginx/html/."
+        - "/home/amvara/projects/cometa_website/code/.:/usr/share/nginx/html/."
       working_dir: /cometa_website
       ports:
         - "8010:80"
-      command: bash /cometa_website/start.sh
+      command: [nginx-debug, '-g', 'daemon off;']
