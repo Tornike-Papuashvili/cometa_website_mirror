@@ -1,48 +1,38 @@
 <?php
 
+require "../PHPMailer/PHPMailerAutoload.php";
+
+$mail = new PHPMailer;
+
+// sending emails via mail.amvara.de
+$mail->isSMTP();
+$mail->Host = "mail.amvara.de";
+$mail->Port = 587;
+$mail->SMTPAuth = true;
+$mail->Username = "tec_dev@amvara.de";
+$mail->Password = "PoHEqbH9dszX7LPHhwoG";    
+$mail->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];
+
+$to = "tec_dev@amvara.de";
+
 $name = $_POST['name'];
 $from = $_POST['email'];
 $title = $_POST['subject'];
-$message = $_POST['message'];
+$message = nl2br($_POST['message']);
 
-// Email and name of sender
-$sender = "tec_dev@amvara.de";
-$senderName = $name;
+// echo $name . "<br>" . $from . "<br>" . $title . "<br>" . $message;
 
-// The subject line of the email
-$subject = "[COMETA website] $title";
+$mail->From = "tec_dev@amvara.de";
+$mail->addAddress($to);
+$mail->Subject = "[COMETA WEBSITE] ". $title;
+$mail->isHtml(TRUE);
+$mail->Body = "Message sent from: $from<br>$name sends his message from cometa.amvara.consulting: <br> $message";
+$mail->CharSet = 'UTF-8';
+if(!$mail->send()) {
+    echo 'Message was not sent.';
+    echo 'Mailer error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent.';
+}
 
-// The plain-text body of the email
-$bodyText =  "$from $subject";
-
-// The HTML-formatted body of the email
-$bodyHtml = nl2br($message);
-
-$mail = new PHPMailer();
-
-// sending emails via mail.amvara.de
-$email->Host = "mail.amvara.de";
-// $email->Mailer = "smtp";
-$email->isSMTP();
-$email->Port = 587;
-$email->SMTPAuth = true;
-$email->Username = "tec_dev@amvara.de";
-$email->Password = "PoHEqbH9dszX7LPHhwoG";    
-$email->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];
-
-// Specify the SMTP settings.
-$mail->setFrom($sender, $senderName);
-$mail->SMTPDebug  = 1;
-
-// Specify the message recipients.
-$mail -> addAddress('tec_dev@amvara.de', 'AMVARA Tech Team');
-
-// Specify the content of the message.
-$mail->Subject = $subject;
-$mail->IsHTML(true);
-$mail->Body = $bodyHtml;
-$mail->AltBody = $bodyText;
-$mail->CharSet ="UTF-8";
-
-$mail_result = $mail->send();
 ?>
