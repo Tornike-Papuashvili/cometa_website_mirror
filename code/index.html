@@ -63,13 +63,19 @@
 
     <section id="main-slider">
         <div class="owl-carousel">
-            <div class="item" style="background-image: url(cometa_images/cometaHomeInfinite.png);">
+            <div class="item" style="background-image: url(cometa_images/cometaHome.png);">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="carousel-content">
-                                    <h1>Visual Regression Testing</h1>
+                                    <div class="start">
+                                        <h1 style="color: white;">Functional and Visual Regression Testing</h1>
+                                        <br>
+                                        <p>Co.meta serves to automate human actions on websites.</p>
+                                        <p>No more bad information. Check the results in screenshots.</p>
+                                        <p>Take your development to another level.</p>
+                                    </div>
                                     <!-- <img class="no_limit" src="cometa_images/loading.svg" alt="img"><br> -->
                                     <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">Create Test</a>
                                 </div>
@@ -79,14 +85,16 @@
                 </div>
             </div>
             <!--/.item-->
-            <div>
+            <div class="video-content">
                 <video autoplay muted loop id="myVideo" class="item" style="width: 100%;">
                     <source src="video/cometa_video_speed.mp4" style="width: 100%;" type="video/mp4">
                 </video>
                 <div class="content">
                     <h1>Web Testing Automation</h1>
-                    <p>Co.meta serves to automate human actions on websites.
-                    <br>In this way you can test failures in web development, in an efficient way.</p>
+                    <p>Co.meta is a web service that allows the creation of Web Testing Automation.</p>
+                    <p>Check the correct operation after changes in the web application.</p>
+                    <p>Verify the correct layout after changes in the web application.</p>
+                    <p>Compare the layout in various resolutions (mobile, tablets, desktop) against the template.</p>
                     <button id="myBtn" onclick="myFunction()">Pause</button>
                 </div>
             </div>
@@ -731,22 +739,26 @@
             
             $(".popup img").click(function () {
                 var $src = $(this).attr("src");
+                var stateObj = {hola:'adios'};
+                history.pushState(stateObj, "imagen", "/#"+$src);
                 $(".showed").fadeIn();
                 $(".img-showed .pop").attr("style", "background-image: url("+$src+");");
             });
             
             $(".span, .overlay, .showed").click(function () {
                 $(".showed").fadeOut();
+                history.replaceState({}, '', '/#');
             });
             
         });
     </script>
 
     <!-- Pick back -->
-    <!-- <script>
-        history.pushState(stateObj, "imagen", "/imagen-10");
-        window.addEventListener('popstate', function() { document.querySelector('.showed').style.display = 'none'})
-    </script> -->
+    <script>
+        window.addEventListener('popstate', function() { 
+            document.querySelector('.showed').style.display = 'none'
+        });
+    </script>
 
     <!-- Close navbar onclick -->
     <script>

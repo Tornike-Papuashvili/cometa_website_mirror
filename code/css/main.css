@@ -328,6 +328,7 @@ ul.nostyle i {
   line-height:25px;
   text-transform: capitalize; font-family:'Roboto-regular';
   color: #fff; text-align: center;
+  text-align: left;
 }
 
 #main-slider .slider-inner h2 > span {
@@ -639,10 +640,11 @@ ul.nostyle i {
   height: 100%;
 }
 
-#main-slider h1 {
+#main-slider .start {
   color: white;
   height: 50%;
-  margin-top: 68px;
+  margin-top: 100px;
+  text-align: left;
 }
 
 #main-slider a {
@@ -657,6 +659,9 @@ ul.nostyle i {
   pointer-events: none;
 }
 
+.carousel-content{
+  text-align: left;
+}
 
 
 /* Mobile */
@@ -687,11 +692,18 @@ ul.nostyle i {
   .img-showed {
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+  #main-slider .start, .carousel-content, #main-slider .slider-inner p{
+    text-align: center;
+  }
+  .video-content {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .content {
   position: fixed;
-  bottom: 0;
+  bottom: -410px;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
