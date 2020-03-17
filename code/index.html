@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -69,9 +69,8 @@
                         <div class="row">
                             <div class="col-sm-12 text-center">
                                 <div class="carousel-content">
-                                    <h2></h2>
-                                    <p><br></p><br><br>
-                                    <img class="no_limit" src="cometa_images/loading.svg" alt="img"><br>
+                                    <h1>Visual Regression Testing</h1>
+                                    <!-- <img class="no_limit" src="cometa_images/loading.svg" alt="img"><br> -->
                                     <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">Create Test</a>
                                 </div>
                             </div>
@@ -191,7 +190,7 @@
                                 <img class="img_features" src="cometa_images/jerarquia.svg" alt="img">
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Structured Hierarchy</h4>
+                                <h4 class="media-heading">Flexible Hierarchy</h4>
                                 <p>Manage your tests through our hierarchy,
                                     where you can select the department,
                                     application and environment of your project.</p>
@@ -230,7 +229,7 @@
                 <div class="portfolio-item creative">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" style="cursor: pointer;" src="cometa_images/test1.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test1.png" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Work Zone</h3>
@@ -441,10 +440,11 @@
             <div class="showed">
                 <div class="overlay"></div>
                 <div class="img-showed">
-                    <div class="cross">
-                        <span>X</span>
+                    <div class="pop">
+                        <div class="contain">
+                            <div class="cross"></div>
+                        </div>
                     </div>
-                    <img src="">
                 </div>
             </div>
 
@@ -526,8 +526,6 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Pricing Table</h2>
-                <!-- <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
 
             <div class="row">
@@ -712,8 +710,9 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scrolling-nav.js"></script>
-    <script>
 
+    <!-- Carousel -->
+    <script>
         $(document).ready(function ($) {
             $("#owl-example").owlCarousel();
         });
@@ -721,14 +720,11 @@
         $("body").data("page", "frontpage");
 
         $("#owl-example").owlCarousel({
-            items: 3,
-            /*        itemsDesktop : [1199,3],
-                    itemsDesktopSmall : [980,9],
-                    itemsTablet: [768,5],
-                    itemsTabletSmall: false,
-                    itemsMobile : [479,4]*/
+            items: 3
         })
     </script>
+
+    <!-- Images open/close -->
     <script>
         $(function () {
             "use strict";
@@ -736,15 +732,36 @@
             $(".popup img").click(function () {
                 var $src = $(this).attr("src");
                 $(".showed").fadeIn();
-                $(".img-showed img").attr("src", $src);
+                $(".img-showed .pop").attr("style", "background-image: url("+$src+");");
             });
             
-            $("span, .overlay").click(function () {
+            $(".span, .overlay, .showed").click(function () {
                 $(".showed").fadeOut();
             });
             
         });
     </script>
+
+    <!-- Pick back -->
+    <!-- <script>
+        history.pushState(stateObj, "imagen", "/imagen-10");
+        window.addEventListener('popstate', function() { document.querySelector('.showed').style.display = 'none'})
+    </script> -->
+
+    <!-- Close navbar onclick -->
+    <script>
+        $(function () {
+            "use strict";
+            
+            $(".scroll a").click(function () {
+                $("#header nav div .navbar-collapse").removeClass("collapse in");
+                $("#header nav div .navbar-collapse").addClass("collapse");
+            });
+            
+        });
+    </script>
+
+    <!-- Video play/pause -->
     <script>
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
@@ -759,6 +776,8 @@
             }
         }
     </script>
+
+    <!-- Ajax send mail (contact us) -->
     <script>
         $(document).ready(function(){
             $("#main-contact-form").submit(function( event ){
