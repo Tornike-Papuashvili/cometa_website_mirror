@@ -357,24 +357,68 @@ ul.nostyle i {
   -webkit-transition: background-color 400ms;
   transition: background-color 400ms;
 }
+
+.back_img,
+.next_img {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 30px;
+  display: inline-block;
+  margin-top: 37%;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 100px;
+  z-index: 5;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+
+.next_img {
+  right: -90px;
+  background-image: url('../cometa_images/der.png');
+  background-position-x: 25px;
+}
+
+.back_img {
+  left: -90px;
+  background-image: url('../cometa_images/izq.png');
+  background-position-x: 20px;
+}
+
+.back_img:hover,
+.next_img:hover {
+  background-color: #45aed6;
+  cursor: pointer;
+}
+
 #main-slider .owl-prev:hover,
 #main-slider .owl-next:hover {
   background-color: #45aed6;
 }
+
 #main-slider .owl-prev {
   left: -35px;
   text-indent: 14px;
 }
+
 #main-slider .owl-next {
   right: -35px;
   text-indent: -14px;
 }
+
 #bar {
   width: 0%;
   max-width: 100%;
   height: 4px;
   background: #45aed6;
 }
+
 #progressBar {
   margin-top: -4px;
   position: relative;
@@ -1197,8 +1241,7 @@ ul.nostyle i {
   z-index: 99;
   cursor: pointer;
   border-radius: 5px;
-  background-color: black;
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 30px;
   height: 30px;
   text-align: center;
@@ -1207,6 +1250,10 @@ ul.nostyle i {
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
+}
+
+.cross:hover {
+  background-color: #ef5350;
 }
 
 .img-showed span {
