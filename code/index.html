@@ -83,7 +83,7 @@
             </div>
             <!--/.item-->
 
-            <div class="item" style="background-image: url(cometa_images/oficina.jpg);">
+            <div class="item" style="background-image: url(cometa_images/space_laptop.jpg);">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -348,9 +348,9 @@
                 <div class="img-showed">
                     <div class="pop">
                         <div class="contain">
-                            <div class="next_img" onclick="window.alert('PERO QUE PASAAAA ALANTE')"></div>
+                            <div class="next_img" onclick="img_next(event)"></div>
                             <div class="cross"></div>
-                            <div class="back_img" onclick="window.alert('PERO QUE PASAAAA ATRAS')"></div>
+                            <div class="back_img" onclick="img_prev(event)"></div>
                         </div>
                     </div>
                 </div>
@@ -744,23 +744,69 @@
 
     <!-- Images open/close -->
     <script>
+        var index, available_indexes;
+        function set_img(src) {
+            var stateObj = {hola:'adios'};
+            history.pushState(stateObj, "imagen", "/#"+src);
+            $(".img-showed .pop").attr("style", "background-image: url("+src+");");
+        }
         $(function () {
             "use strict";
-            
             $(".popup img").click(function () {
+                var index_clicked = $(this).parents(".portfolio-item:not(.isotope-hidden)").index()
+                available_indexes = $(".portfolio-item:not(.isotope-hidden)").map(function(x,y){return $(y).index()}).get()
+                index = available_indexes.indexOf(index_clicked);
+
                 var $src = $(this).attr("src");
-                var stateObj = {hola:'adios'};
-                history.pushState(stateObj, "imagen", "/#"+$src);
+                
                 $(".showed").fadeIn();
-                $(".img-showed .pop").attr("style", "background-image: url("+$src+");");
+                set_img($src);
+                calc_arrow()
             });
             
             $(".span, .overlay, .showed").click(function () {
+                console.log("out");
                 $(".showed").fadeOut();
                 history.replaceState({}, '', '/#');
             });
             
         });
+        function img_next(event) {
+            event.stopPropagation();
+            var count = available_indexes.length-1;
+            if (index < count) {
+                index += 1;
+                var img = $(".portfolio-item:not(.isotope-hidden):nth-child("+(available_indexes[index]+1)+") img").attr("src");
+                set_img(img);
+            }
+            calc_arrow()
+        }
+
+        function img_prev(event) {
+            console.log(index);
+            console.log(index-1);
+            event.stopPropagation();
+            
+            if (index > 0) {
+                index -= 1;
+                var img = $(".portfolio-item:not(.isotope-hidden):nth-child("+(available_indexes[index]+1)+") img").attr("src");
+                set_img(img);
+            }
+            calc_arrow()
+        }
+
+        function calc_arrow() {
+            if (index == 0) {
+                $(".next_img").fadeIn();
+                $(".back_img").fadeOut();
+            } else if (index == available_indexes.length-1) {
+                $(".next_img").fadeOut();
+                $(".back_img").fadeIn();
+            } else {
+                $(".next_img").fadeIn();
+                $(".back_img").fadeIn();
+            }
+        }
     </script>
 
     <!-- Pick back -->
