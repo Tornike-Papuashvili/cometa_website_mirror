@@ -55,8 +55,8 @@
             <!--/.container-->
         </nav>
         <!--/nav-->
-    </header>
-    <!--/header-->
+    </header> <!--/header-->
+
 
     <section id="main-slider">
         <div class="owl-carousel">
@@ -90,11 +90,11 @@
                             <div class="col-sm-12 text-center">
                                 <div class="carousel-content">
                                     <div class="start">
-                                        <h1 style="color: white;">Functional and Visual Regression Testing</h1>
+                                        <h1 style="color: white;">Software Made in Europe</h1>
                                         <br>
-                                        <p>Co.meta serves to automate human actions on websites.</p>
-                                        <p>No more bad information. Check the results in screenshots.</p>
-                                        <p>Take your development and testing to the next level.</p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
                                     </div>
                                     <!-- <img class="no_limit" src="cometa_images/loading.svg" alt="img"><br> -->
                                     <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">Create Test</a>
@@ -131,7 +131,7 @@
                 <h2 class="section-title text-center wow fadeInDown">How does it Work</h2>
                 <p class="text-center wow fadeInDown">Cometa is a web service to create organized tests online to check your project.<br>
                     With cometa you can detect and see errors at an immediately speed.
-                    <br>This will allow you to take your development to the next level.</p>
+                    <br>Check your tests with the advanced integrated technology of the visual regression testing.</p>
             </div>
 
             <div class="text-center">
@@ -346,12 +346,11 @@
             <div class="showed">
                 <div class="overlay"></div>
                 <div class="img-showed">
-                    <div class="pop">
-                        <div class="contain">
-                            <div class="next_img" onclick="img_next(event)"></div>
-                            <div class="cross"></div>
-                            <div class="back_img" onclick="img_prev(event)"></div>
-                        </div>
+                    <img class="pop" src="" alt="">
+                    <div class="contain">
+                        <div class="next_img" onclick="img_next(event)"></div>
+                        <div class="cross"></div>
+                        <div class="back_img" onclick="img_prev(event)"></div>
                     </div>
                 </div>
             </div>
@@ -705,8 +704,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!--/#get-in-touch-->
+    </section> <!--/#get-in-touch-->
 
 
     <footer id="footer">
@@ -728,7 +726,21 @@
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/hammer.js"></script>
 
+
+    <!-- pop img resize-->
+    <script>
+        function pop_ready() {
+            let width = $(window).width();
+            let height = $(window).height();
+            
+            max_width = width * 0.6;
+            max_height = max_width * 0.55681;
+
+            $(".img-showed").css({ width: max_width, height: max_height});
+        }
+    </script>
     <!-- Carousel -->
     <script>
         $(document).ready(function ($) {
@@ -742,29 +754,57 @@
         })
     </script>
 
+    <!-- Hammer Carroussel-->
+    <script>
+        $(document).ready(function ($) {
+            let elem = document.querySelector('.img-showed');
+            console.log(elem);
+
+            let hammer = new Hammer(elem)
+            // hammer.domEvents = false;
+            // hammer.on("swipeleft swiperight", function(e){e.srcEvent.stopPropagation();});
+
+            hammer.on('swipeleft swiperight', (event) => {
+                // event.srcEvent.stopPropagation()
+                console.log(event);
+                // event.preventDefault()
+                if (event.type === 'swipeleft') {
+                    img_next()
+                    // _cdr.detectChanges()
+                } else if (event.type === 'swiperight') {
+                    img_prev()
+                    // _cdr.detectChanges()
+                }
+            });
+        });
+    </script>
+
     <!-- Images open/close -->
     <script>
         var index, available_indexes;
         function set_img(src) {
             var stateObj = {hola:'adios'};
             history.pushState(stateObj, "imagen", "/#"+src);
-            $(".img-showed .pop").attr("style", "background-image: url("+src+");");
+            $(".img-showed img").attr("src", src);
         }
         $(function () {
             "use strict";
             $(".popup img").click(function () {
-                var index_clicked = $(this).parents(".portfolio-item:not(.isotope-hidden)").index()
-                available_indexes = $(".portfolio-item:not(.isotope-hidden)").map(function(x,y){return $(y).index()}).get()
+                $(window).on('resize', pop_ready);
+                var index_clicked = $(this).parents(".portfolio-item:not(.isotope-hidden)").index();
+                available_indexes = $(".portfolio-item:not(.isotope-hidden)").map(function(x,y){return $(y).index()}).get();
                 index = available_indexes.indexOf(index_clicked);
 
                 var $src = $(this).attr("src");
                 
                 $(".showed").fadeIn();
                 set_img($src);
-                calc_arrow()
+                calc_arrow();
+                pop_ready();
             });
             
-            $(".span, .overlay, .showed").click(function () {
+            $(".cross, .overlay").click(function () {
+                $(window).off('resize', pop_ready);
                 console.log("out");
                 $(".showed").fadeOut();
                 history.replaceState({}, '', '/#');
@@ -772,7 +812,7 @@
             
         });
         function img_next(event) {
-            event.stopPropagation();
+            event&&event.stopPropagation();
             var count = available_indexes.length-1;
             if (index < count) {
                 index += 1;
@@ -783,9 +823,7 @@
         }
 
         function img_prev(event) {
-            console.log(index);
-            console.log(index-1);
-            event.stopPropagation();
+            event&&event.stopPropagation();
             
             if (index > 0) {
                 index -= 1;
