@@ -6,6 +6,8 @@ stage_deployment:
   script:
     - sudo mkdir -p /home/amvara/projects/cometa_website || true
     - sudo cp -rp . /home/amvara/projects/cometa_website/.
+    - sudo docker exec -it cometa_website bash -c "cp default.conf /etc/nginx/sites-available/default.conf"
+    - sudo docker restart cometa_website
   only:
     refs:
       - master
