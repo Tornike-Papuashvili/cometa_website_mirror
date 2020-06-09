@@ -44,9 +44,9 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li class="scroll active"><a href="#home">Home </a></li>
-                        <li class="scroll"><a href="#services">Service </a></li>
-                        <li class="scroll"><a href="#portfolio">Cometa</a></li>
-                        <li class="scroll"><a href="#animated-number">Features</a></li>
+                        <li class="scroll"><a href="#services">Features </a></li>
+                        <li class="scroll"><a href="#portfolio">Screenshots</a></li>
+                        <li class="scroll"><a href="#animated-number">Archtitecture</a></li>
                         <li class="scroll"><a href="#enterprise">Enterprise </a></li>
                         <li class="scroll"><a href="#pricing">Price</a></li>
                         <!-- <li class="scroll"><a href="#blog">  Blog </a></li> -->
@@ -64,20 +64,39 @@
     <section id="main-slider">
         <div class="owl-carousel">
             <div class="item" style="background-image: url(cometa_images/cometaHome.png);">
+                <div class="image_start" style="background-image: url(cometa_images/freestock_app_background_small.jpg);
+                background-position-x: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                float:right;
+                width:100%;
+                height:90%;
+                position:absolute;
+                z-index:1;
+                -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: 'FlipH';">
+                <span style="width:100%; height:100%;">&nbsp;</span>    
+                </div>
                 <div class="slider-inner">
                     <div class="container">
-                        <div class="row">
+                        <div class="row" style="z-index:2; background-color: rgba(0,0,0,0.5); position: relative;">
                             <div class="col-sm-12 text-center">
                                 <div class="carousel-content">
-                                    <div class="start">
-                                        <h1 style="color: white;">Functional and Visual Regression Testing</h1>
+                                
+                                    <div class="start" style="position: relative;z-index:2; margin-left:20px">
+                                        <h1 style="color: white; margin-left:0px;">Functional and Visual Regression Testing with execellence</h1>
                                         <br>
-                                        <p>Co.meta serves to automate human actions on websites.</p>
-                                        <p>No more bad information. Check the results in screenshots.</p>
-                                        <p>Take your development to another level.</p>
-                                    </div>
-                                    <!-- <img class="no_limit" src="cometa_images/loading.svg" alt="img"><br> -->
+                                        <p>Automation of human actions on websites made easy.</p>
+                                        <p>100% Open source. Visual comparison of screenshots!</p>
+                                        <p>Easy testing on over 2000 devices.</p>
+                                    <!-- img class="no_limit" src="cometa_images/freestock_app_background_small.jpg" alt="freestock image with hand holding a telephone" -->
+                                    <br>
                                     <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">Create Test</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -108,8 +127,8 @@
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Our Services</h2>
-                <p class="text-center wow fadeInDown">Using cometa provides many facilities and benefits for your project.</p>
+                <h2 class="section-title text-center wow fadeInDown">Cometa features</h2>
+                <p class="text-center wow fadeInDown">Using cometa provides many benefits for your project. Being 100% open source makes integration of third party tools even more easy.</p>
             </div>
 
             <div class="row">
@@ -137,10 +156,10 @@
                                 <img class="img_features" src="cometa_images/email.png" alt="img">
                             </div>
                             <div class="media-body">
-                                <h4 class="media-heading">Sign in via Google</h4>
+                                <h4 class="media-heading">Sign in via Google, OIDC, ... </h4>
                                 <p>Access through your Google account and
-                                    enjoy our service.
-                                    </p>
+                                    enjoy our service. 
+                                     Onpremises installation uses OIDC login.</p>
                             </div>
                         </div>
                     </div>
@@ -217,10 +236,13 @@
     <section id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">How does it Work</h2>
-                <p class="text-center wow fadeInDown">Cometa is a web service to create organized tests online to check your project.<br>
-                    With cometa you can detect and see errors at an immediate speed.
-                    <br>This will allow you to take your development to another level.</p>
+                <h2 class="section-title text-center wow fadeInDown">How does co.meta Work</h2>
+                <p class="text-center wow fadeInDown">Cometa is a web service to create organized tests online 
+                    to check your project.<br>
+                    With co.meta you can continously test functionality and prepare visual regression tests with imagecomparison.
+                    <br>This will allow you to take your development to another level.
+                
+                </p>
             </div>
 
             <div class="text-center">
@@ -237,7 +259,7 @@
                 <div class="portfolio-item creative">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test1.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test1.png" lowsrc="70perc/test1.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Work Zone</h3>
@@ -250,7 +272,7 @@
                 <div class="portfolio-item creative">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test2.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test2.png" lowsrc="70perc/test2.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa New Test</h3>
@@ -263,7 +285,7 @@
                 <div class="portfolio-item creative">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test3.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test3.png" lowsrc="70perc/test3.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Test Options</h3>
@@ -276,7 +298,7 @@
                 <div class="portfolio-item creative">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test4.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test4.png" lowsrc="70perc/test4.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Test Modify</h3>
@@ -289,7 +311,7 @@
                 <div class="portfolio-item creative corporate">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test5.png" alt="">
+                            <img class="img-responsive" src="cometa_images/test5.png" lowsrc="70perc/test5.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Running Test</h3>
@@ -302,7 +324,7 @@
                 <div class="portfolio-item corporate">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring1.png" alt="">
+                            <img class="img-responsive" src="cometa_images/monitoring1.png" lowsrc="70perc/monitoring1.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Check Test</h3>
@@ -315,7 +337,7 @@
                 <div class="portfolio-item corporate">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring2.png" alt="">
+                            <img class="img-responsive" src="cometa_images/monitoring2.png" lowsrc="70perc/monitoring2.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Schedule Test</h3>
@@ -328,7 +350,7 @@
                 <div class="portfolio-item corporate portfolio">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring3.png" alt="">
+                            <img class="img-responsive" src="cometa_images/monitoring3.png" lowsrc="70perc/monitoring3.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Check Result</h3>
@@ -341,7 +363,7 @@
                 <div class="portfolio-item portfolio">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/results1.png" alt="">
+                            <img class="img-responsive" src="cometa_images/results1.png" lowsrc="70perc/results1.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Panel Result</h3>
@@ -354,7 +376,7 @@
                 <div class="portfolio-item portfolio">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/results2.png" alt="">
+                            <img class="img-responsive" src="cometa_images/results2.png" lowsrc="70perc/results2.jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Screenshot Result</h3>
@@ -367,7 +389,7 @@
                 <div class="portfolio-item user">
                     <div class="portfolio-item-inner">
                         <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel1.png" alt="">
+                            <img class="img-responsive" src="cometa_images/controlpanel1.png" lowsrc="70perc/controlpanel1jpg_Q70.jpg" alt="">
                         </div>
                         <div class="portfolio-info">
                             <h3>Cometa Department Panel</h3>
@@ -507,23 +529,23 @@
             <div class="advantage">
                 <div>
                     <ul class="spec-list">
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Multiple Authentication Providers</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Installation on premise or Cloud</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Custom installation time in 15 min</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Multiple Authentication Providers</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Installation on premise or Cloud</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Custom installation time in 15 min</li>
                     </ul>
                 </div>
                 <div>
                     <ul class="spec-list">
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Enterprise Security</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Full access control by users and groups</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Access security by OIDC</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Enterprise Security</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Full access control by users and groups</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Access security by OIDC</li>
                     </ul>
                 </div>
                 <div>
                     <ul class="spec-list">
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Live, Interactive Testing</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Implemented in docker technology</li>
-                        <li><img alt="check" class="check" src="cometa_images/check.jpg">Priority Support</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Live, Interactive Testing</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Implemented in docker technology</li>
+                        <li><img alt="check" class="check" src="cometa_images/check.jpg" lowsrc="70perc/check.jpg_Q70.jpg">Priority Support</li>
                     </ul>
                 </div>
             </div>

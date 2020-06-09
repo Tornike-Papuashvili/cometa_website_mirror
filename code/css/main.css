@@ -17,6 +17,8 @@ h6 {
   font-weight: 600;
   font-family: 'Roboto-regular', sans-serif;
   color: #272727;
+  margin-left:20px;
+  margin-top:20xp;
 }
 
 .logo {
@@ -703,7 +705,7 @@ ul.nostyle i {
 
 .content {
   position: fixed;
-  bottom: -410px;
+  bottom: -200px;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
@@ -825,7 +827,7 @@ ul.nostyle i {
 }
 
 .electric {
-  background: #132125 url(../cometa_images/electronic.jpg) no-repeat 0 0;
+  background: #132125 url(../cometa_images/70perc/electronic.jpg_Q70.jpg) no-repeat 0 0;
   opacity: 0.95;
   background-size: cover;
   position: absolute;
