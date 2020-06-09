@@ -12,7 +12,8 @@ cd /home/amvara/projects
 clone via git + change to the new directory
 
 ```
-git clone ssh://git@git.amvara.de:2223/amvararuben/cometa_website.cd cometa_website
+git clone ssh://git@git.amvara.de:2223/amvararuben/cometa_website.```
+cd cometa_website
 ```
 
 Start the docker container
