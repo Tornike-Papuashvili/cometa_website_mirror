@@ -1,5 +1,98 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,100italic,300italic,400italic,700italic);
 
+/* ---- Mobile first since 2020-06-10 ---- */
+
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: #f5f5f5;
+}
+
+.screenshotdiv {
+  flex:1 100%;
+  margin: 20px 0 0;
+  padding: 0px;
+}
+
+.screenshotdivcontainer {
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding:20px;
+  height:auto;
+  cursor: pointer;
+}
+.screenshotdivcontainer:hover {
+  box-shadow: 0 2px 5px -1px rgba(255,108,0,.2), 0 1px 5px 0 rgba(255,108,0,.14), 0 1px 10px 0 rgba(255,108,0,.12);
+
+}
+
+
+.screenshotdiv picture, .screenshotdiv img {
+  height: auto; 
+  width: auto; 
+  max-width: 100%; 
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.screenshotdivcontainer h1 {
+  font-size: medium !important;
+  margin-left:  0px !important;
+  text-rendering: optimizeLegibility;
+  color: #1565c0;
+}
+
+.imagewrapper {
+  height:auto;
+  width:100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.portfolio-items, .portfolio-filter {
+  display: none !important;
+}
+
+/* Tablet */
+@media(min-width:767px) {
+  .screenshotdivcontainer {
+    height:400px;
+  }
+  .screenshotdiv {
+    flex: 1 50%;
+    padding:10px;
+  }
+  .imagewrapper {
+    height:225px;
+  }
+}
+/* Desktop */
+@media(min-width:1024px) {
+  .screenshotdiv {
+    flex: 1 33.3333%;
+    max-width:350px;
+  }
+  .screenshots {
+    margin: 0 auto;
+    padding: 0 10%;
+  }
+  .container {
+    max-width: 1024px;
+  }
+  .col-md-4 {
+    height: 200px;
+  }
+}
+
+
+/* ---- original css rules from ruben --- */
+
 body {
   padding-top: 100px;
   background: #fff;
@@ -670,7 +763,9 @@ ul.nostyle i {
 }
 
 
+/* ------ */
 /* Mobile */
+/* ------ */
 @media(max-width:767px) {
   #get-in-touch .container .row .row {
     margin: unset;

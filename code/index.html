@@ -9,10 +9,10 @@
     <link rel="icon" href="./icons/reverse_favicon.png">
     <title>Co.meta - Visual and functional regression testing made in Europe</title>
     <!-- preloading -->
-    <link href="/fonts/Roboto-Medium.woff" rel="preload">
-    <link href="/fonts/Roboto-Regular.woff" rel="preload">
-    <link href="/fonts/Roboto-Light.woff" rel="preload">
-    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0" rel="preload">
+    <link href="/fonts/Roboto-Medium.woff" rel="preload" as="font">
+    <link href="/fonts/Roboto-Regular.woff" rel="preload" as="font">
+    <link href="/fonts/Roboto-Light.woff" rel="preload" as="font">
+    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0" rel="preload" as="font">
 
     <!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,12 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.transitions.css" rel="stylesheet">
+    <!-- magnify plugin -->
+    <link href="js/jquery-image-viewer-magnify/css/jquery.magnify.min.css" rel="stylesheet">
+    <link href="js/jquery-image-viewer-magnify/css/snack.css" rel="stylesheet">
+    <link href="js/jquery-image-viewer-magnify/css/snack-helper.css" rel="stylesheet">
+    <link href="js/jquery-image-viewer-magnify/css/docs.css" rel="stylesheet">
+    <!-- main amvara css -->
     <link href="css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -143,7 +149,7 @@
             <div class="row">
                 <div class="features">
 
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
                         <div class="media service-box">
                             <div class="pull-left">
                                 <img src="images/icon3.png" alt="img">
@@ -168,7 +174,7 @@
                                 <h4 class="media-heading">Sign in via Google, OIDC, ... </h4>
                                 <p>Access through your Google account and
                                     enjoy our service. 
-                                     Onpremises installation uses OIDC login.</p>
+                                     On-premises installation uses OIDC login.</p>
                             </div>
                         </div>
                     </div>
@@ -239,253 +245,284 @@
     </section> <!--/#services-->
 
 
+
+
     <section id="portfolio">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">How does co.meta Work</h2>
-                <p class="text-center wow fadeInDown">Cometa is a web service to create organized tests online 
+                <p class="text-center wow fadeInDown">co.meta is a web service to create organized tests online 
                     to check your project.<br>
-                    With co.meta you can continously test functionality and prepare visual regression tests with imagecomparison.
-                    <br>This will allow you to take your development to another level.
-                
+                    co.meta continously tests functionality and performes visual regression tests with image comparison.
+                    <br>This will take your development to the next level.
+                </p>
+                <p class="text-center wow fadeInDown">
+                    Enjoy the screenshots ... or try out co.meta and convince yourself. 
+                    <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">co.meta trial</a> 
                 </p>
             </div>
 
-            <div class="text-center">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All</a></li>
-                    <li><a href="#" data-filter=".creative">Tests</a></li>
-                    <li><a href="#" data-filter=".corporate"> Monitoring </a></li>
-                    <li><a href="#" data-filter=".portfolio">Test Results </a></li>
-                    <li><a href="#" data-filter=".user">Control Panel </a></li>
-                </ul>
-                <!--/#portfolio-filter-->
-            </div>
-            <div class="portfolio-items">
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test1.jpg.webp" lowsrc="cometa_images/70perc/test1.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Work Zone</h3>
-                            Tests zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test2.jpg.webp" lowsrc="cometa_images/70perc/test2.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa New Test</h3>
-                            Test zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test3.jpg.webp" lowsrc="cometa_images/70perc/test3.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Test Options</h3>
-                            Test zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item creative">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test4.jpg.webp" lowsrc="cometa_images/70perc/test4.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Test Modify</h3>
-                            Tests zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item creative corporate">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/test5.jpg.webp" lowsrc="cometa_images/70perc/test5.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Running Test</h3>
-                            Monitoring zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring1.jpg.webp" lowsrc="cometa_images/70perc/monitoring1.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Check Test</h3>
-                            Monitoring zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring2.jpg.webp" lowsrc="cometa_images/70perc/monitoring2.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Schedule Test</h3>
-                            Monitoring zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item corporate portfolio">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/monitoring3.jpg.webp" lowsrc="cometa_images/70perc/monitoring3.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Check Result</h3>
-                            Results zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item portfolio">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/results1.jpg.webp" lowsrc="cometa_images/70perc/results1.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Panel Result</h3>
-                            Results zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item portfolio">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/results2.jpg.webp" lowsrc="cometa_images/70perc/results2.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Screenshot Result</h3>
-                            Results zone
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel1.jpg.webp" lowsrc="70perc/controlpanel1.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Department Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel2.jpg.webp" lowsrc="70perc/controlpanel2.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Application Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel3.jpg.webp" lowsrc="70perc/controlpanel3.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Browser Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel4.jpg.webp" lowsrc="70perc/controlpanel4.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Environment Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel5.jpg.webp" lowsrc="70perc/controlpanel5.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Feature Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-                <div class="portfolio-item user">
-                    <div class="portfolio-item-inner">
-                        <div class="popup">
-                            <img class="img-responsive" src="cometa_images/controlpanel6.webp" lowsrc="70perc/controlpanel6.jpg_Q70.webp" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Cometa Account Panel</h3>
-                            Control Panel
-                        </div>
-                    </div>
-                </div>
-                <!--/.portfolio-item-->
-
-            </div>
-
-            <!--Popup-->
-            <div class="showed">
-                <div class="overlay"></div>
-                <div class="img-showed">
-                    <div class="pop">
-                        <div class="contain">
-                            <div class="cross"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <!--/.container-->
+        <!--/.container--> 
+        <section class="screenshots">
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan Editor ... no programming knowledge needed." 
+                    href="cometa_images/screenshots/StepEditor.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/StepEditor.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/StepEditor.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/StepEditor.PNG" alt="Testplan Editor Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Testplan Editor</h1>
+                    <div class="screenshottext">
+                        Make it easy. The testplan editor is selfexplaining. Each step is written almost natural language.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Browser Selection ... all you can eat and massive parallel on demand" href="cometa_images/screenshots/BrowserSelection.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/BrowserSelection.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/BrowserSelection.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/BrowserSelection.PNG" alt="Browser Selection Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Selection of browsers</h1>
+                    <div class="screenshottext">
+                        Vast variety of browsers and operating systems to choose from. Massive parallel testing saves uncounted number of hours. 
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan Scheduling ... flexible no, next level of flexible" 
+                    href="cometa_images/screenshots/SchedulePopup.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/SchedulePopup.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/SchedulePopup.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/SchedulePopup.PNG" alt="Testplan Scheduling Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Scheduling tests</h1>
+                    <div class="screenshottext">
+                        Let co.meta work while your are sleeping.
+                        Why make things more complicated?
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Administration Panel ... co.meta is designed for selfservice." 
+                    href="cometa_images/screenshots/ScheduleEditor.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/ScheduleEditor.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/ScheduleEditor.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/ScheduleEditor.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Administration panel</h1>
+                    <div class="screenshottext">
+                        The administration panel provides admins with a minimal set of actions. 
+                        co.meta is designed to be self-service with almost no needs for administration.
+                    </div>
+                </div>
+            </div> -->
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Live Steps ... observe what co.meta is doing, anytime." 
+                    href="cometa_images/screenshots/LiveSteps.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/LiveSteps.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/LiveSteps.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/LiveSteps.PNG" alt="Life Steps Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Life steps</h1>
+                    <div class="screenshottext">
+                        See life what co.meta executes. Complex software made easy. 
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Overview Filtering ... flexible filtering for any user as needed." 
+                    href="cometa_images/screenshots/SearchFilters.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/SearchFilters.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/SearchFilters.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/SearchFilters.PNG" alt="Oview Filtering Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Overview Filtering</h1>
+                    <div class="screenshottext">
+                        Using flexible filtering gives every user a personal view to the testplan dashboard, as needed.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan sorting ... give the right importance to your testplan dashboard." 
+                    href="cometa_images/screenshots/FeatureSorting.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureSorting.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureSorting.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureSorting.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Testplan Sorting</h1>
+                    <div class="screenshottext">
+                        Give your dashboard the correct importance of every items. This way co.meta users may focus just in time on what they need to see.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Test results ... see how your test performs." 
+                    href="cometa_images/screenshots/FeatureResults.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureResults.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureResults.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureResults.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Test Results</h1>
+                    <div class="screenshottext">
+                        Understanding the performance of your tests is probably the most important task. Fine layout, easy overview and more details on click. 
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan details ... each step has details for review." 
+                    href="cometa_images/screenshots/FeatureStepResult.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureStepResult.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureStepResult.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureStepResult.PNG" alt="Testplan Details Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Step Detail Results</h1>
+                    <div class="screenshottext">
+                        Each step records the results as executed. Comparing the screenshots shows pixel difference.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Result Scores ... understanding made easy." 
+                    href="cometa_images/screenshots/FeatureResultScore.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureResultScore.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureResultScore.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureResultScore.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Result Score</h1>
+                    <div class="screenshottext">
+                        Result score gives a clean and fast overview of your testplan performance.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan Logging ... professional logging as basis for deep understanding." 
+                    href="cometa_images/screenshots/FeatureResultLog.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureResultLog.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureResultLog.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureResultLog.PNG" alt="Professional logging Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Professional Logging</h1>
+                    <div class="screenshottext">
+                        Logging is the art of understanding details. Consume logs right inside co.meta. Selfservice at it's best. 
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan actions ... easy access to most needed actions." 
+                    href="cometa_images/screenshots/FeatureOptions.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureOptions.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureOptions.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureOptions.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Testplan actions</h1>
+                    <div class="screenshottext">
+                        Most needed actions in prominent position for fast access. Saves valuable time.
+                        Reduced complexcity for easy understanding. Speed up your daily work. 
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Administration Panel ... co.meta is designed for selfservice." href="cometa_images/screenshots/AdminPanel.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/AdminPanel.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/AdminPanel.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/AdminPanel.PNG" alt="Administration Panel Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Administration panel</h1>
+                    <div class="screenshottext">
+                        The administration panel provides admins with a minimal set of actions. 
+                        co.meta was designed to be self-service. This is probably the most unused screen.
+                    </div>
+                </div>
+            </div>
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Edit general information of your testplan." href="cometa_images/screenshots/EditFeatureInfo.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/EditFeatureInfo.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/EditFeatureInfo.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/EditFeatureInfo.PNG" alt="Edit Testplan general information Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Editing a test</h1>
+                    <div class="screenshottext">
+                        Editing a test is like writing in natural language. No special technical skills required - basic CSS selector knowledge helps.                    
+                    </div>
+                </div>
+            </div> 
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="General information of your testplan gives a quick overview." href="cometa_images/screenshots/FeatureBox.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureBox.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureBox.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureBox.PNG" alt="Overview information Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Testplan Box</h1>
+                    <div class="screenshottext">
+                        Each testplan is represented with detailed information on the dashboard. Overview of complex testing - promise, solved!                    
+                    </div>
+                </div>
+            </div>     
+            <div class="screenshotdiv wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms" data-wow-offset="150">
+                <div class="screenshotdivcontainer" data-magnify="gallery" data-group="a" data-caption="Testplan Actions ... clean interface, actions at your fingertips." 
+                    href="cometa_images/screenshots/FeatureOptionsMenu.PNG">
+                    <div class="imagewrapper">
+                        <picture>
+                            <source srcset="cometa_images/screenshots/FeatureOptionsMenu.PNG_60perc.webp" type="image/webp">
+                            <source srcset="cometa_images/screenshots/FeatureOptionsMenu.PNG" type="image/png"> 
+                            <img src="cometa_images/screenshots/FeatureOptionsMenu.PNG" alt="Feature Options Menu Screenshot">
+                        </picture>
+                    </div>
+                    <h1>Actions Dashboard Menu</h1>
+                    <div class="screenshottext">
+                        The clean layout makes navigation to actions in testplan dashboard easy. Clean layouts help to focus.                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </section> <!--/#portfolio-->
 
 
@@ -494,7 +531,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Architecture</h2>
-                <p class="text-center wow fadeInDown">Cometa has been developed with 100% open source tools. Scales 100%. Can be used on premises, on desktop or on cloud. </p>
+                <p class="text-center wow fadeInDown">Cometa has been developed with 100% open source tools. Scales 100%. Can be used on-premises, on desktop or on cloud. </p>
             </div>
             <div class="row text-center">
                 <div class="col-sm-3 col-xs-6">
@@ -736,21 +773,52 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <!-- <script src="https://maps.google.com/maps/api/js?sensor=true"></script> -->
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
+    <!-- <script src="js/smoothscroll.js"></script> -->
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/jquery.inview.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <script src="js/jquery-image-viewer-magnify/js/jquery.magnify.min.js"></script>
 
     <!-- Carousel -->
     <script>
         $(document).ready(function ($) {
             $("#owl-example").owlCarousel();
+
+            /* Magnify plugin */
+            var defaultOpts = {
+                draggable: true,
+                resizable: true,
+                movable: true,
+                keyboard: true,
+                title: true,
+                modalWidth: 320,
+                modalHeight: 320,
+                fixedContent: true,
+                fixedModalSize: false,
+                initMaximized: false,
+                gapThreshold: 0.02,
+                ratioThreshold: 0.1,
+                minRatio: 0.05,
+                maxRatio: 16,
+                headToolbar: ['maximize', 'close'],
+                footToolbar: ['zoomIn', 'zoomOut', 'prev', 'fullscreen', 'next', 'actualSize', 'rotateRight'],
+                multiInstances: false,
+                initEvent: 'click',
+                initAnimation: true,
+                fixedModalPos: false,
+                zIndex: 1090,
+                dragHandle: '.magnify-modal',
+                progressiveLoading: true
+            };
+            $('[data-magnify]').magnify(defaultOpts);
+            /* eof magnify plugin */
+
         });
 
         $("body").data("page", "frontpage");
@@ -767,31 +835,15 @@
             
             $(document).keyup(function(e) {
                 // if (e.keyCode === 13) $('.save').click();     // enter
-                if (e.keyCode === 27) $(".showed").click();   // esc
+                if (e.keyCode === 27) $(".magnify-button-close").click();   // esc closes popups
             });
 
-            $(".popup img").click(function () {
-                var $src = $(this).attr("src");
-                var stateObj = {hola:'adios'};
-                history.pushState(stateObj, "imagen", "/#"+$src);
-                $(".showed").fadeIn();
-                $(".img-showed .pop").attr("style", "background-image: url("+$src+");");
-            });
             
-            $(".span, .overlay, .showed").click(function () {
-                $(".showed").fadeOut();
-                history.replaceState({}, '', '/#');
-            });
             
         });
     </script>
 
-    <!-- Pick back -->
-    <script>
-        window.addEventListener('popstate', function() { 
-            document.querySelector('.showed').style.display = 'none'
-        });
-    </script>
+
 
     <!-- Close navbar onclick -->
     <script>
