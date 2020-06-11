@@ -98,7 +98,8 @@ body {
   background: #fff;
   font-family: 'Roboto-regular', sans-serif;
   font-weight: 300;
-  color: #454545; font-size:15px;
+  color: #454545; 
+  font-size:1.4em !important;
   line-height: 26px;
 }
 h1,
@@ -422,7 +423,6 @@ ul.nostyle i {
 
 #main-slider .slider-inner p {
   margin-top: 20px;
-  font-size: 16px;
   line-height:25px;
   text-transform: capitalize; font-family:'Roboto-regular';
   color: #fff; text-align: center;
@@ -606,7 +606,7 @@ ul.nostyle i {
   color: #fff;
 }
 #portfolio .portfolio-item .portfolio-item-inner .portfolio-info h3 {
-  font-size: 16px;
+  font-size: 1.4em;
   line-height: 1;
   margin: 0;
   color: #fff;
@@ -915,7 +915,6 @@ ul.nostyle i {
   border-color: #eee;
 }
 .panel-default > .panel-heading .panel-title {
-  font-size: 14px;
   font-weight: normal;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
@@ -1072,115 +1071,8 @@ ul.nostyle i {
 
 #get-in-touch .btn.btn-primary{font-family: 'Roboto-medium'; font-size:22px; padding:8px 40px;}
 
-#blog {
-  padding: 87px 0 87px 0; background:#f6f6f6; overflow:hidden;
-}
-
-#blog .blog-post {
-  padding: 15px; background:#fff; 
-}
-#blog .blog-post .item {
-  height: 200px; }
-
 #owl-example .item{ margin:15px;}
 
-
-
-#blog .blog-post .post-format {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 34px;
-  text-align: center;
-  color: #fff;
-  background: #222534;
-  border: 3px solid #fff;
-  border-radius: 100px;
-}
-#blog .blog-post.blog-large .entry-thumbnail {
-  margin: -15px -15px 15px;
-  position: relative;
-}
-#blog .blog-post.blog-large .entry-thumbnail img{ max-width:100%;}
-
-#blog .blog-post.blog-large .post-format {
-  width: 66px;
-  height: 66px;
-  line-height: 60px;
-  position: absolute;
-  right: 20px;
-  bottom: -33px;
-}
-#blog .blog-post.blog-large .post-format > i {
-  font-size: 20px;
-}
-#blog .blog-post.blog-large .entry-date {
-  font-size: 12px;font-family: 'Roboto-regular';
-  display: block;
-  margin-bottom: 5px; text-align:center;
-  text-transform: uppercase;
-  color: #45aed6;
-}
-#blog .blog-post.blog-large .entry-title {
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-#blog .blog-post.blog-large .entry-title a {
-  color: #64686d; font-size:18px; text-transform:uppercase; font-weight:normal; font-family: 'Roboto-medium';
-}
-#blog .blog-post.blog-large .entry-title a:hover {
-  color: #45aed6;
-}
-#blog .blog-post.blog-media {
-  margin-bottom: 30px;
-}
-#blog .blog-post.blog-media .entry-thumbnail {
-  margin: -15px 15px -15px -15px;
-  position: relative;
-}
-#blog .blog-post.blog-media .post-format {
-  position: absolute;
-  top: 20px;
-  right: -10px;
-}
-#blog .blog-post.blog-media .entry-date {
-  font-size: 12px;
-  display: block;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  color: #45aed6;
-}
-#blog .blog-post.blog-media .entry-title {
-  margin-top: 0;
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 15px;
-}
-#blog .blog-post.blog-media .entry-title a {
-  color: #64686d;
-}
-#blog .blog-post.blog-media .entry-title a:hover {
-  color: #45aed6;
-}
-#blog .blog-post .entry-meta {
-  margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-#blog .blog-post .entry-meta > span {
-  display: inline-block;
-  margin-right: 10px;
-  color: #999;
-}
-#blog .blog-post .entry-meta > span > a {
-  color: #999;
-}
-#blog .blog-post .entry-meta > span > a:hover {
-  color: #45aed6;
-}
-#blog .btn.btn-primary{ font-family: 'Roboto-regular'; font-size:15px; margin-top:20px; padding:10px 30px;}
 #contact {
   position: relative;
   overflow: hidden;
@@ -1258,37 +1150,6 @@ ul.nostyle i {
 	#blog .blog-post.blog-large .entry-thumbnail{ padding-top:0px;}
 }
 
-.showed {
-  
-  z-index: 999;
-  display: none;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
-.showed .overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,.66);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.showed .img-showed {
-  width: 1100px;
-  height: 700px;
-  /* background: #FFF; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  /* overflow: hidden */
-}
-
 .contain {
   position: relative;
 }
@@ -1310,26 +1171,4 @@ ul.nostyle i {
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
-}
-
-.img-showed span {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  color: white;
-}
-.img-showed .pop {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 80%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  left: 0;
 }
