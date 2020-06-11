@@ -106,6 +106,7 @@
                                         <p>100% Open source made with &hearts; in Barcelona. </p>
                                         <p>Visual comparison of screenshots!</p>
                                         <p>Easy testing on over 2000 devices.</p>
+                                        <p>REST API integrates easy and smooth.</p>
                                     <!-- img class="no_limit" src="cometa_images/freestock_app_background_small.jpg" alt="freestock image with hand holding a telephone" -->
                                     <br>
                                     <a class="btn btn-primary btn-lg" href="https://cometa.amvara.de" target="_blank">Create a Test</a>
@@ -233,6 +234,9 @@
                                 <p>Manage your tests through our hierarchy,
                                     where you can select the department,
                                     application and environment of your project.</p>
+                                <p>
+                                    User based folder type organization. Each user can personally re-group individual tests. Woah!
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -277,7 +281,7 @@
                     </div>
                     <h1>Testplan Editor</h1>
                     <div class="screenshottext">
-                        Make it easy. The testplan editor is selfexplaining. Each step is written almost natural language.
+                        Make it easy. The testplan editor is selfexplaining. Write tests in almost natural language.
                     </div>
                 </div>
             </div>
@@ -484,9 +488,9 @@
                             <img src="cometa_images/screenshots/EditFeatureInfo.PNG" alt="Edit Testplan general information Screenshot">
                         </picture>
                     </div>
-                    <h1>Editing a test</h1>
+                    <h1>Choosing Departments</h1>
                     <div class="screenshottext">
-                        Editing a test is like writing in natural language. No special technical skills required - basic CSS selector knowledge helps.                    
+                        Selfexplaining. co.meta offers an easy to understand security-concept for multi-homed tenants.                   
                     </div>
                 </div>
             </div> 
@@ -501,7 +505,7 @@
                     </div>
                     <h1>Testplan Box</h1>
                     <div class="screenshottext">
-                        Each testplan is represented with detailed information on the dashboard. Overview of complex testing - promise, solved!                    
+                        Each testplan is represented with detailed information on the dashboard. Focus on important information of complex test-situations.                    
                     </div>
                 </div>
             </div>     
@@ -531,7 +535,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Architecture</h2>
-                <p class="text-center wow fadeInDown">Cometa has been developed with 100% open source tools. Scales 100%. Can be used on-premises, on desktop or on cloud. </p>
+                <p class="text-center wow fadeInDown">Cometa has been developed with 100% open source tools. Scales 100%. Can be used on-premises, on desktop or on cloud. The co.meta REST API integrates easily with continous testing solutions as seen in gitlab. </p>
             </div>
             <div class="row text-center">
                 <div class="col-sm-3 col-xs-6">
@@ -824,7 +828,8 @@
         $("body").data("page", "frontpage");
 
         $("#owl-example").owlCarousel({
-            items: 3
+            items: 3,
+            autoplayHoverPause: true
         })
     </script>
 
