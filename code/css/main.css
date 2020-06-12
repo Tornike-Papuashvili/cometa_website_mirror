@@ -59,6 +59,18 @@
   display: none !important;
 }
 
+.spec-list li {
+  height: 55px;
+  display: flex;
+  justify-content:left;
+  align-items:center;
+  margin:5px;
+  border-bottom:1px solid #efefef
+}
+.spec-list li div {
+  vertical-align:middle;
+}
+
 /* Tablet */
 @media(min-width:767px) {
   .screenshotdivcontainer {
@@ -88,6 +100,12 @@
   .col-md-4 {
     height: 200px;
   }
+  #myVideo {
+    width: 100%; 
+    padding-left:80px;
+    padding-right:80px;
+  }
+
 }
 
 
@@ -111,7 +129,7 @@ h6 {
   font-weight: 600;
   font-family: 'Roboto-regular', sans-serif;
   color: #272727;
-  margin-left:20px;
+  /* margin-left:20px; */
   margin-top:20xp;
 }
 
@@ -800,7 +818,7 @@ ul.nostyle i {
     text-align: center;
   }
   .video-content {
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(0, 0, 0, 0.2);
     z-index:2;
   }
 }
