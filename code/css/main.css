@@ -62,7 +62,7 @@
 /* Tablet */
 @media(min-width:767px) {
   .screenshotdivcontainer {
-    height:400px;
+    height:425px;
   }
   .screenshotdiv {
     flex: 1 50%;
@@ -800,17 +800,18 @@ ul.nostyle i {
     text-align: center;
   }
   .video-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index:2;
   }
 }
 
 .content {
-  position: fixed;
-  bottom: -200px;
+  /* bottom: -75%; */
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
   padding: 20px;
+  z-index:1;
 }
 
 .content h1 {
