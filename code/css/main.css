@@ -430,7 +430,7 @@ ul.nostyle i {
   overflow: hidden;
 }
 #main-slider .item {
-  height: 800px;
+  height: 55em;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -521,12 +521,14 @@ ul.nostyle i {
   padding: 87px 0 87px;
 }
 .media.service-box {
-  margin: 25px 0; text-align:center;
+  margin: 30px 0; text-align:center;
 }
 
 
 .media.service-box .pull-left {
-  width:100%; padding-bottom:25px;
+  width:100%; 
+  padding-bottom:25px;
+  padding-right: 20px !important;
 }
 .media.service-box .pull-left > i {
   font-size: 42px;
@@ -986,8 +988,8 @@ ul.nostyle i {
 }
 .animated-number {
   display: inline-block;font-family: 'Roboto-medium';
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   font-size: 29px;
   line-height: 180px;
   border: 5px solid #fff;
@@ -1172,7 +1174,7 @@ ul.nostyle i {
 	
 @media (max-width:500px){
 	#blog .blog-post.blog-large .entry-thumbnail img, .team-img img{ width:100%;}
-	.animated-number{ height:130px; width:130px; line-height:130px; font-size:22px;}
+	.animated-number{ height:100px; width:100px; line-height:130px; font-size:22px;}
 	#animated-number strong{ font-size:17px;}
 	#blog .blog-post.blog-large .entry-thumbnail{ padding-top:0px;}
 }
