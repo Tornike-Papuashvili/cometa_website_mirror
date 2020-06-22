@@ -15,7 +15,7 @@ $mail->Username = "tec_dev@amvara.de";
 $mail->Password = "PoHEqbH9dszX7LPHhwoG";    
 $mail->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];
 
-$to = "amvarapol@gmail.com";
+$to = "info@amvara.de";
 
 $name = $_POST['name'];
 $from = $_POST['email'];

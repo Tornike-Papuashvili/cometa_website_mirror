@@ -940,7 +940,6 @@
                 // Recaptcha checking. We get the generated token and send it to the backend. This fires when we submit a new value.
                 grecaptcha.ready(function() {
                     // Do request for recaptcha token
-                    console.log('ready');
                     grecaptcha.execute('6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2', {action: 'send_email'}).then(function(token) {
                         // Add token to form and then serialize the form. Then, send the data.
                         $('#main-contact-form').prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
