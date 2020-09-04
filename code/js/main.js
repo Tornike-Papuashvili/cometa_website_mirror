@@ -137,28 +137,28 @@ jQuery(function($) {'use strict';
 	$(window).load(function(){'use strict';
 		var $portfolio_selectors = $('.portfolio-filter >li>a');
 		var $portfolio = $('.portfolio-items');
-		$portfolio.isotope({
-			itemSelector : '.portfolio-item',
-			layoutMode : 'fitRows'
-		});
+		// $portfolio.isotope({
+		// 	itemSelector : '.portfolio-item',
+		// 	layoutMode : 'fitRows'
+		// });
 		
-		$portfolio_selectors.on('click', function(){
-			$portfolio_selectors.removeClass('active');
-			$(this).addClass('active');
-			var selector = $(this).attr('data-filter');
-			$portfolio.isotope({ filter: selector });
-			return false;
-		});
+		// $portfolio_selectors.on('click', function(){
+		// 	$portfolio_selectors.removeClass('active');
+		// 	$(this).addClass('active');
+		// 	var selector = $(this).attr('data-filter');
+		// 	$portfolio.isotope({ filter: selector });
+		// 	return false;
+		// });
 	});
 
 	$(document).ready(function() {
-		//Animated Progress
-		$('.progress-bar').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-			if (visible) {
-				$(this).css('width', $(this).data('width') + '%');
-				$(this).unbind('inview');
-			}
-		});
+		// //Animated Progress
+		// $('.progress-bar').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+		// 	if (visible) {
+		// 		$(this).css('width', $(this).data('width') + '%');
+		// 		$(this).unbind('inview');
+		// 	}
+		// });
 
 		//Animated Number
 		$.fn.animateNumbers = function(stop, commas, duration, ease) {
@@ -200,34 +200,34 @@ jQuery(function($) {'use strict';
 		$.ajax({
 			url: $(this).attr('action'),
 			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Sending email...</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+			form_status.html('<p class="text-success">Thank you for contacting us. We will get back to you as early as possible! </p>').delay(3000).fadeOut();
 		});
 	});
 
 	//Pretty Photo
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});
+	// $("a[rel^='prettyPhoto']").prettyPhoto({
+	// 	social_tools: false
+	// });
 
 	//Google Map
-	var latitude = $('#google-map').data('latitude');
-	var longitude = $('#google-map').data('longitude');
-	function initialize_map() {
-		var myLatlng = new google.maps.LatLng(latitude,longitude);
-		var mapOptions = {
-			zoom: 14,
-			scrollwheel: false,
-			center: myLatlng
-		};
-		var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-		var marker = new google.maps.Marker({
-			position: myLatlng,
-			map: map
-		});
-	}
-	google.maps.event.addDomListener(window, 'load', initialize_map);
+	// var latitude = $('#google-map').data('latitude');
+	// var longitude = $('#google-map').data('longitude');
+	// function initialize_map() {
+	// 	var myLatlng = new google.maps.LatLng(latitude,longitude);
+	// 	var mapOptions = {
+	// 		zoom: 14,
+	// 		scrollwheel: false,
+	// 		center: myLatlng
+	// 	};
+	// 	var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+	// 	var marker = new google.maps.Marker({
+	// 		position: myLatlng,
+	// 		map: map
+	// 	});
+	// }
+	// google.maps.event.addDomListener(window, 'load', initialize_map);
 
 });

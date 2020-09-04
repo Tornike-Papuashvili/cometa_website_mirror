@@ -8,9 +8,16 @@ services:
       volumes:
         - ./:/cometa_website
         - ./default.conf:/etc/nginx/conf.d/default.conf
+        - ./default.conf:/etc/nginx/sites-available/default.conf
         - ./code/:/var/www/html/
       working_dir: /cometa_website
       environment:
         - PHP_ERRORS_STDERR=TRUE
       ports:
         - "8010:80"
+      # This docker by default uses nginx:100 as process owner
+      # This normally conflicts with the host /etc/passwd and leads to permission problems.
+      # FIXME
+      # map docker:/etc/passwd to an outside /etc/passwd 
+      # use for example userid 1001 (normally gitlab-runner) 
+      # user: "1001:1001"
