@@ -15,7 +15,7 @@
     <!-- <link href="/fonts/Roboto-Medium.woff" rel="preload" as="font"> -->
     <!-- <link href="/fonts/Roboto-Regular.woff" rel="preload" as="font"> -->
     <!-- <link href="/fonts/Roboto-Light.woff" rel="preload" as="font"> -->
-    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0" rel="preload" as="font" crossorigin>
+    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0, Arial" rel="preload" as="font" crossorigin>
 
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -97,9 +97,7 @@
                 -o-transform: scaleX(-1);
                 -webkit-transform: scaleX(-1);
                 transform: scaleX(-1);
-                filter: FlipH;
-                filter:blur(7px);
-                -ms-filter: 'FlipH';">
+                filter:blur(7px);">
                 <span style="width:100%; height:100%;">&nbsp;</span>    
                 </div>
                 <div class="slider-inner">
@@ -125,24 +123,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--/.item-->
-            <div class="video-content">
-                <div class="content">
-                    <h1>Web Testing Automation</h1>
-                    <p>co.meta is a web service that allows the creation of Web Testing Automation. co.meta belongs to the category of web testing tools.</p>
-                </div>
-                <video autoplay muted loop id="myVideo">
-                    <source src="video/cometa_video_speed.mp4" style="width: 100%;" type="video/mp4">
-                </video>
-                <div class="content" style="background-color:rgba(0,0,0,0.2)">
-                    co.meta checks correct operation and layout after changing your web application.
-                    co.meta is able to verify the correct layout with screenshot comparison.
-                    Compare the layout in various resolutions (mobile, tablets, desktop) against the template.
-                    The video is too fast? <a href="#get-in-touch">Schedule a Demo</a> or 
-                    <a href="https://cometa.amvara.de/">start a test - it's free</a>. No more excuses! 
-                    </p>
                 </div>
             </div>
             <!--/.item-->
@@ -829,50 +809,7 @@
 
     <script src="js/combined.js"></script>
     <script src="js/main.js"></script>
- 
-    <!-- Carousel -->
-    <script>
-        $(document).ready(function ($) {
-            $("#owl-example").owlCarousel();
 
-            /* Magnify plugin */
-            var defaultOpts = {
-                draggable: true,
-                resizable: true,
-                movable: true,
-                keyboard: true,
-                title: true,
-                modalWidth: 320,
-                modalHeight: 320,
-                fixedContent: true,
-                fixedModalSize: false,
-                initMaximized: false,
-                gapThreshold: 0.02,
-                ratioThreshold: 0.1,
-                minRatio: 0.05,
-                maxRatio: 16,
-                headToolbar: ['maximize', 'close'],
-                footToolbar: ['zoomIn', 'zoomOut', 'prev', 'fullscreen', 'next', 'actualSize', 'rotateRight'],
-                multiInstances: false,
-                initEvent: 'click',
-                initAnimation: true,
-                fixedModalPos: false,
-                zIndex: 1090,
-                dragHandle: '.magnify-modal',
-                progressiveLoading: true
-            };
-            $('[data-magnify]').magnify(defaultOpts);
-            /* eof magnify plugin */
-
-        });
-
-        $("body").data("page", "frontpage");
-
-        $("#owl-example").owlCarousel({
-            items: 3,
-            autoplayHoverPause: true
-        })
-    </script>
 
     <!-- Images open/close -->
     <script>

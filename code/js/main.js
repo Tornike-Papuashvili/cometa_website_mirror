@@ -46,7 +46,7 @@ jQuery(function($) {'use strict';
 
 	//Slider
 	$(document).ready(function() {
-		var time = 20; // time in seconds
+		var time = 2; // time in seconds
 
 	 	var $progressBar,
 	      $bar, 
@@ -100,19 +100,7 @@ jQuery(function($) {'use strict';
 	      tick = setInterval(interval, 10);
 	    };
 	 
-	    function interval() {
-	      if(isPause === false){
-	        percentTime += 1 / time;
-	        $bar.css({
-	           width: percentTime+"%"
-	         });
-	        //if percentTime is equal or greater than 100
-	        if(percentTime >= 100){
-	          //slide to next item 
-	          $elem.trigger('owl.next')
-	        }
-	      }
-	    }
+	    
 	 
 	    //pause while dragging 
 	    function pauseOnDragging(){
