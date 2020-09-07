@@ -24,3 +24,7 @@ sudo docker-compose up
 This will start the docker and make the website available at http://127.0.0.1:8010/
 
 For details see: https://redmine.amvara.de/projects/cometa/wiki/CometaWebSite
+
+# Cambios
+
+We changed all the "code" folder permissions from 775 to 777
