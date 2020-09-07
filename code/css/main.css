@@ -956,14 +956,14 @@ ul.nostyle i {
 }
 
 .electric {
-  background: #132125 url(../cometa_images/70perc/electronic.jpg_Q70.jpg) no-repeat 0 0;
+  background: #132125 url(../cometa_images/electronic_small.jpg) no-repeat 0 0;
   opacity: 0.95;
   background-size: cover;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  filter: blur(3px);
+  filter: blur(7px);
   left: 0;
 }
 
