@@ -40,6 +40,10 @@
   display: block;
   margin: 0 auto;
 }
+iframe{
+  width: 100%;
+  max-width: 1000px;
+}
 
 .screenshotdivcontainer h1 {
   font-size: medium !important;
@@ -61,6 +65,7 @@
 
 .spec-list li {
   height: 55px;
+  width: 300px;
   display: flex;
   justify-content:left;
   align-items:center;
@@ -153,10 +158,6 @@ h6 {
   width: 120px;
 }
 
-.img_features{
-  width: 88px;
-}
-
 .animated-number:hover {
   transform: scale(1.15, 1.15);
   opacity: 1;
@@ -212,7 +213,7 @@ h6 {
 
 .Light49{ font-family:'Roboto-thin'; font-size:49px;}
 a {
-  color: #45aed6;
+  color:#2a95be;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
   -o-transition: color 400ms, background-color 400ms;
@@ -972,8 +973,9 @@ ul.nostyle i {
 }
 
 .check {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  margin: 10px;
+  height: 30px;
 }
 
 #animated-number h1,
@@ -988,12 +990,12 @@ ul.nostyle i {
 }
 .animated-number {
   display: inline-block;font-family: 'Roboto-medium';
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   font-size: 29px;
   line-height: 180px;
   border: 5px solid #fff;
-  border-radius: 100px;
+  border-radius: 40px;
   margin-bottom: 20px;
 }
 #pricing {
@@ -1168,7 +1170,7 @@ ul.nostyle i {
 	#get-in-touch .amvara{ margin-bottom:25px;}
 	#get-in-touch .amvara .team-img, #get-in-touch .amvara .team-info h3 { text-align:center;}
 	#get-in-touch .amvara .team-info span { text-align:center; display:block;}
-	#blog .blog-post{ margin-bottom:20px;}
+  #blog .blog-post{ margin-bottom:20px;}
 
 	}
 	
