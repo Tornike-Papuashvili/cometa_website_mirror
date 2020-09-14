@@ -219,3 +219,29 @@ jQuery(function($) {'use strict';
 	// google.maps.event.addDomListener(window, 'load', initialize_map);
 
 });
+
+function playvideo(){
+	document.querySelector("#play").innerHTML = `<iframe class="m-player"  title="YouTube Amvara" 
+	src="https://www.youtube.com/embed/videoseries?list=PLlsHIWKF3pk1oUXk_rwhAPaaq1fmctqhp&rel=0&autoplay=1" frameborder="0";
+	allow="autoplay" allowfullscreen></iframe>`;
+	document.querySelector(".play").style.backgroundImage = "";
+}
+
+function selectprice(option){
+	var free = document.getElementsByClassName("p-free");
+	var enterprise = document.getElementsByClassName("p-enterprise");
+	var buttons = document.getElementsByClassName("p-buttons")[0];
+	if(option == 1){
+		for(i = 0 ; i < free.length ; i++){
+			free[i].style.color = "#538300";
+			enterprise[i].style.color = "#636363";
+		}
+		buttons.innerHTML = `<a class="btn btn-primary btn-lg p-button" href="https://cometa.amvara.de/" target="_blank">Create a Test</a>`;
+	}else{
+		for(i = 0 ; i < enterprise.length ; i++){
+			free[i].style.color = "#636363";
+			enterprise[i].style.color = "#538300";
+		}
+		buttons.innerHTML = `<a class="btn btn-primary btn-lg p-button" href="#get-in-touch">Contact us</a>`;
+	}
+}
