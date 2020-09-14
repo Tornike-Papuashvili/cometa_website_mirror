@@ -10,11 +10,12 @@
     <meta name="keywords"
         content="automated software testing,web testing tools,browser automation,ui testing,automated web testing,gui testing tools,web macro,web ui testing,ui testing framework,ui automation,automated ui testing,web automation,website automation,usertesting, user testing, testing usability, web usability, usability test, usability testing, online usability testing tools, usability testing software, remote user testing , website usability testing , mobile user testing">
     <link rel="icon" href="./icons/reverse_favicon.png">
-    <link rel="canonical" href="https://cometa.amvara.consulting/index.html" />
+    <link rel="canonical" href="http://localhost:8010/" />
+    <link rel="manifest" href="manifest.json" />
 
     <title>co.meta - Visual and functional regression testing made in Europe - automated web testing with excellence
     </title>
-    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0" rel="preload" as="font" crossorigin>
+    <link href="/fonts/fontawesome-webfont.woff?v=4.2.0&display=swap" rel="preload" as="font" crossorigin>
 
 
 
@@ -768,23 +769,23 @@
                 <div class="col-sm-6">
                     <form method="post" name="contact-form" id="main-contact-form" action="./">
                         <div class="form-group">
-                            <input type="text" required placeholder="Name" class="form-control" id="name" name="name">
+                            <label for="name">‎Name</label>
+                                <input type="text" required class="form-control" id="name" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="email" required placeholder="Email" class="form-control" id="email"
+                            <label for="email">Email</label>  
+                                <input type="email" required class="form-control" id="email"
                                 name="email">
                         </div>
                         <div class="form-group">
-
-                            <input type="text" required placeholder="Subject" class="form-control" id="subject"
+                            <label for="subject">Subject</label>
+                                <input type="text" required class="form-control" id="subject"
                                 name="subject">
-
                         </div>
                         <div class="form-group">
-
-                            <textarea required placeholder="Message" rows="8" class="form-control" id="message"
-                                name="message"></textarea>
-
+                            <label for="message">Message</label>
+                                <textarea required rows="8" class="form-control" id="message"
+                                name="message"></textarea> 
                         </div>
                         <button class="btn btn-primary" type="submit">SUBMIT</button>
                         <div id="respuesta" style="display: none;"> </div>
@@ -909,9 +910,11 @@
             });
         });
     </script>
-
+<!--
     <script src="https://www.google.com/recaptcha/api.js?render=6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+-->
+    
 
 </body>
 
