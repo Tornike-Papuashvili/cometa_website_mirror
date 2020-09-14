@@ -221,7 +221,7 @@ jQuery(function($) {'use strict';
 });
 
 function playvideo(){
-	document.querySelector("#play").innerHTML = `<iframe class="m-player"  title="YouTube Amvara" 
+	document.querySelector("#play").innerHTML += `<iframe class="m-player"  title="YouTube Amvara" 
 	src="https://www.youtube.com/embed/videoseries?list=PLlsHIWKF3pk1oUXk_rwhAPaaq1fmctqhp&rel=0&autoplay=1" frameborder="0";
 	allow="autoplay" allowfullscreen></iframe>`;
 	document.querySelector(".play").style.backgroundImage = "";

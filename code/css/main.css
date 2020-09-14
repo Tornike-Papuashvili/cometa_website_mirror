@@ -429,7 +429,7 @@ ul.nostyle i {
     color: white;
     padding-bottom: 20px;
     font-size: 16px;
-    font-family: 'Roboto-regular', "Arial", "Times New Roman";
+    font-family: 'Roboto-regular', sans-serif;
     font-weight: normal;
   }
 
@@ -509,7 +509,7 @@ ul.nostyle i {
   font-size: 40px;
   line-height: 1;
   text-transform: capitalize;
-  font-family: 'Roboto-thin', "Arial", "Times New Roman";
+  font-family: 'Roboto-thin', sans-serif;
   color: #fff;
   text-align: center;
 }
@@ -518,7 +518,7 @@ ul.nostyle i {
   margin-top: 20px;
   line-height: 25px;
   text-transform: capitalize;
-  font-family: 'Roboto-regular', "Arial", "Times New Roman";
+  font-family: 'Roboto-regular', sans-serif;
   color: #fff;
   text-align: center;
   text-align: left;
@@ -647,6 +647,7 @@ ul.nostyle i {
   height: calc(100vh - 60px);
   background-color: rgba(0, 0, 0, .8);
   padding: 0 5%;
+  min-height: 600px;
 }
 
 .right-side {
@@ -679,7 +680,6 @@ ul.nostyle i {
   position: relative;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   background-image: url(/cometa_images/Yahya012-VideoPlayer-pngtree.com.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -745,6 +745,11 @@ ul.nostyle i {
   justify-content: flex-start;
 }
 
+.m-videotitle{
+  position: absolute;
+  top:-70px;
+  color: #e5b355;
+}
 
 
 @media (max-width: 1224px) {
@@ -956,7 +961,7 @@ ul.nostyle i {
 #portfolio .portfolio-filter>li a {
   display: block;
   padding: 7px 15px;
-  font-family: 'Roboto-regular', "Arial", "Times New Roman";
+  font-family: 'Roboto-regular', sans-serif;
   color: #64686d;
   position: relative;
 }
@@ -1489,7 +1494,7 @@ ul.nostyle i {
 
 #get-in-touch .form-control {
   height: 40px;
-  font-family: 'Roboto-regular', "Arial", "Times New Roman";
+  font-family: 'Roboto-regular', sans-serif;
   color: #323232;
 }
 
