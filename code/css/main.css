@@ -332,7 +332,7 @@ hr {
   bottom: -1px;
   left: 0;
   width: 40%;
-  border-bottom: 1px solid #45aed6;
+  border-bottom: 1px solid #e5b355;
 }
 
 ul.nostyle {
@@ -342,7 +342,7 @@ ul.nostyle {
 }
 
 ul.nostyle i {
-  color: #45aed6;
+  color: #e5b355;
 }
 
 .scaleIn {
@@ -405,7 +405,7 @@ ul.nostyle i {
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 1);
 }
 
 .navbar.navbar-default .navbar-toggle {
@@ -473,82 +473,23 @@ ul.nostyle i {
   #main-menu.navbar-default .dropdown-menu>li.active,
   #main-menu.navbar-default .dropdown-menu>li.open,
   #main-menu.navbar-default .dropdown-menu>li:hover {
-    border-left-color: #45aed6;
+    border-left-color: #e5b355;
   }
 
   #main-menu.navbar-default .dropdown-menu>li.active>a,
   #main-menu.navbar-default .dropdown-menu>li.open>a,
   #main-menu.navbar-default .dropdown-menu>li:hover>a {
-    color: #45aed6;
+    color: #e5b355;
     background-color: transparent;
   }
 }
 
-#main-slider {
-  overflow: hidden;
-}
-
-#main-slider .item {
-  height: 55em;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-}
-
-#main-slider .slider-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-}
-
-#main-slider .slider-inner h2 {
-  margin-top: 247px;
-  font-size: 40px;
-  line-height: 1;
-  text-transform: capitalize;
-  font-family: 'Roboto-thin';
-  color: #fff;
-  text-align: center;
-}
-
-#main-slider .slider-inner p {
-  margin-top: 20px;
-  line-height: 25px;
-  text-transform: capitalize;
-  font-family: 'Roboto-regular';
-  color: #fff;
-  text-align: center;
-  text-align: left;
-}
-
-#main-slider .slider-inner h2>span {
-  color: #45aed6;
-}
-
-#main-slider .slider-inner .btn {
-  margin-top: 20px;
-  background: transparent;
-  border: 3px solid #e5b355;
-  border-radius: 30px;
-}
-
-#main-slider .slider-inner .btn.btn-primary {
-  padding: 10px 46px;
-  font-size: 22px;
-}
-
-#main-slider .slider-inner .btn.btn-primary:hover {
-  background: #FCAC51;
-}
 
 #bar {
   width: 0%;
   max-width: 100%;
   height: 4px;
-  background: #45aed6;
+  background: #e5b355;
 }
 
 #progressBar {
@@ -1362,7 +1303,7 @@ ul.nostyle i {
 
 .nav.main-tab>li.active>a {
   background: #222534;
-  color: #45aed6;
+  color: #e5b355;
 }
 
 .nav.main-tab>li:first-child>a {
