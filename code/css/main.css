@@ -137,6 +137,7 @@ body {
   background: #fff;
   font-family: 'Roboto-regular';
   font-weight: 300;
+  min-width: 300px;
   color: #454545;
   font-size: 1.4em !important;
   line-height: 26px;
@@ -226,7 +227,7 @@ h6 {
 }
 
 a {
-  color:  #FCAC51;
+  color: #FCAC51;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
   -o-transition: color 400ms, background-color 400ms;
@@ -686,9 +687,9 @@ ul.nostyle i {
   justify-content: flex-start;
 }
 
-.m-videotitle{
+.m-videotitle {
   position: absolute;
-  top:-70px;
+  top: -70px;
   color: #e5b355;
 }
 
@@ -731,7 +732,8 @@ ul.nostyle i {
   }
 
   .m-button:nth-child(2) {
-    margin: 0px;
+    margin-left: 0px;
+    margin-bottom: 70px;
   }
 
   .buttons {
