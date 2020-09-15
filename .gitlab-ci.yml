@@ -6,7 +6,6 @@ stage_deployment:
   script:
     - sudo mkdir -p /home/amvara/projects/cometa_website || true
     - sudo cp -rp . /home/amvara/projects/cometa_website/.
-    - sudo docker restart cometa_website
   only:
     refs:
       - master

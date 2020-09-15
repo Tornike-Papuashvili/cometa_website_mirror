@@ -44,89 +44,7 @@ jQuery(function($) {'use strict';
 	 	$(this).closest('.panel-heading').toggleClass('active');
 	});
 
-	//Slider
-	$(document).ready(function() {
-		var time = 20; // time in seconds
-
-	 	var $progressBar,
-	      $bar, 
-	      $elem, 
-	      isPause, 
-	      tick,
-	      percentTime;
-	 
-	    //Init the carousel
-	    $("#main-slider").find('.owl-carousel').owlCarousel({
-	      slideSpeed : 500,
-	      paginationSpeed : 500,
-	      singleItem : true,
-	      navigation : true,
-			navigationText: [
-			"<i class='fa fa-angle-left'></i>",
-			"<i class='fa fa-angle-right'></i>"
-			],
-	      afterInit : progressBar,
-	      afterMove : moved,
-	      startDragging : pauseOnDragging,
-	      //autoHeight : true,
-	      transitionStyle : "fadeUp"
-	    });
-	 
-	    //Init progressBar where elem is $("#owl-demo")
-	    function progressBar(elem){
-	      $elem = elem;
-	      //build progress bar elements
-	      buildProgressBar();
-	      //start counting
-	      start();
-	    }
-	 
-	    //create div#progressBar and div#bar then append to $(".owl-carousel")
-	    function buildProgressBar(){
-	      $progressBar = $("<div>",{
-	        id:"progressBar"
-	      });
-	      $bar = $("<div>",{
-	        id:"bar"
-	      });
-	      $progressBar.append($bar).appendTo($elem);
-	    }
-	 
-	    function start() {
-	      //reset timer
-	      percentTime = 0;
-	      isPause = false;
-	      //run interval every 0.01 second
-	      tick = setInterval(interval, 10);
-	    };
-	 
-	    function interval() {
-	      if(isPause === false){
-	        percentTime += 1 / time;
-	        $bar.css({
-	           width: percentTime+"%"
-	         });
-	        //if percentTime is equal or greater than 100
-	        if(percentTime >= 100){
-	          //slide to next item 
-	          $elem.trigger('owl.next')
-	        }
-	      }
-	    }
-	 
-	    //pause while dragging 
-	    function pauseOnDragging(){
-	      isPause = true;
-	    }
-	 
-	    //moved callback
-	    function moved(){
-	      //clear interval
-	      clearTimeout(tick);
-	      //start again
-	      start();
-	    }
-	});
+	
 
 	//Initiat WOW JS
 	new WOW().init();
@@ -134,7 +52,7 @@ jQuery(function($) {'use strict';
 	smoothScroll.init();
 
 	// portfolio filter
-	$(window).load(function(){'use strict';
+	$(window).on("load", function(){'use strict';
 		var $portfolio_selectors = $('.portfolio-filter >li>a');
 		var $portfolio = $('.portfolio-items');
 		// $portfolio.isotope({
@@ -231,3 +149,29 @@ jQuery(function($) {'use strict';
 	// google.maps.event.addDomListener(window, 'load', initialize_map);
 
 });
+
+function playvideo(){
+	document.querySelector("#play").innerHTML += `<iframe class="m-player"  title="YouTube Amvara" 
+	src="https://www.youtube.com/embed/videoseries?list=PLlsHIWKF3pk1oUXk_rwhAPaaq1fmctqhp&rel=0&autoplay=1" frameborder="0";
+	allow="autoplay" allowfullscreen></iframe>`;
+	document.querySelector(".play").style.backgroundImage = "";
+}
+
+function selectprice(option){
+	var free = document.getElementsByClassName("p-free");
+	var enterprise = document.getElementsByClassName("p-enterprise");
+	var buttons = document.getElementsByClassName("p-buttons")[0];
+	if(option == 1){
+		for(i = 0 ; i < free.length ; i++){
+			free[i].style.color = "#538300";
+			enterprise[i].style.color = "#636363";
+		}
+		buttons.innerHTML = `<a class="btn btn-primary btn-lg p-button" href="https://cometa.amvara.de/" target="_blank">Create a Test</a>`;
+	}else{
+		for(i = 0 ; i < enterprise.length ; i++){
+			free[i].style.color = "#636363";
+			enterprise[i].style.color = "#538300";
+		}
+		buttons.innerHTML = `<a class="btn btn-primary btn-lg p-button" href="#get-in-touch">Contact us</a>`;
+	}
+}
