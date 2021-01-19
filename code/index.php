@@ -808,7 +808,7 @@
                             echo $MailCaptcha->Html(); 
                         ?>
                         <div class="form-group">
-                            <label for="answer">Answer</label>
+                            <label for="answer">Please type what you see in the image above</label>
                             <input type="text" required class="form-control" id="answer" name="answer">
                         </div>
                         <button class="btn btn-primary" type="submit">SUBMIT</button>
