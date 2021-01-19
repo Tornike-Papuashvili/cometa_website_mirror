@@ -7,4 +7,11 @@
     <!--
         BotDetect Captcha Simple API configuration
     -->
+    <captchaStyles>
+        <captchaStyle>
+            <name>welcomeCaptcha</name>
+            <userInputID>userCaptchaInput</userInputID>
+            <codeLength>3-5</codeLength>
+        </captchaStyle>
+    </captchaStyles>
 </botdetect>
