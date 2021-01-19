@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php require("botdetect.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
     </title>
     <link href="/fonts/fontawesome-webfont.woff?v=4.2.0&display=swap" rel="preload" as="font" crossorigin>
     <!-- core CSS and main amvara css -->
-
+    <link type="text/css" rel="Stylesheet" href="<?php echo CaptchaUrls::LayoutStylesheetUrl() ?>" />
     <link href="css/style.min.css" rel="stylesheet">
 
 </head>
@@ -800,6 +802,15 @@
                             <label for="message">Message</label>
                             <textarea required rows="8" class="form-control" id="message" name="message"></textarea>
                         </div>
+                        <?php
+                            $MailCaptcha = new Captcha("MailCaptcha");
+                            $MailCaptcha->UserInputID = "answer";
+                            echo $MailCaptcha->Html(); 
+                        ?>
+                        <div class="form-group">
+                            <label for="answer">Answer</label>
+                            <input type="text" required class="form-control" id="answer" name="answer">
+                        </div>
                         <button class="btn btn-primary" type="submit">SUBMIT</button>
                         <div id="respuesta" style="display: none;"> </div>
                     </form>
@@ -899,7 +910,7 @@
             $("#main-contact-form").submit(function (event) {
                 event.preventDefault();
                 // Recaptcha checking. We get the generated token and send it to the backend. This fires when we submit a new value.
-                grecaptcha.ready(function () {
+                /*grecaptcha.ready(function () {
                     // Do request for recaptcha token
                     grecaptcha.execute('6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2', {
                         action: 'send_email'
@@ -907,7 +918,7 @@
                         // Add token to form and then serialize the form. Then, send the data.
                         $('#main-contact-form').prepend(
                             '<input type="hidden" name="g-recaptcha-response" value="' +
-                            token + '">');
+                            token + '">'); */
                         $.ajax({
                             url: "./php/mail.php",
                             type: "POST",
@@ -917,16 +928,16 @@
                                 $("#respuesta").html(data);
                             }
                         })
-                    });;
-                });
+                    // });;
+                // });
                 return false;
             });
         });
     </script>
     <!--Captcha-->
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2"></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 
 </body>
 

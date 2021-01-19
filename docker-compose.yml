@@ -2,7 +2,7 @@ version: "3"
 
 services:
     nginx:
-      image: richarvey/nginx-php-fpm:latest
+      image: richarvey/nginx-php-fpm:1.5.7
       container_name: cometa_website
       restart: always
       volumes:
