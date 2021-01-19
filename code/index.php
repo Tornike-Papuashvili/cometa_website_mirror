@@ -907,29 +907,31 @@
     <!-- Ajax send mail (contact us) -->
     <script>
         $(document).ready(function () {
-            $("#main-contact-form").submit(function (event) {
+            var form = $("#main-contact-form");
+            form.submit(function (event) {
+                // Prevent default form submission behavior
                 event.preventDefault();
-                // Recaptcha checking. We get the generated token and send it to the backend. This fires when we submit a new value.
-                /*grecaptcha.ready(function () {
-                    // Do request for recaptcha token
-                    grecaptcha.execute('6Ld-7KcZAAAAAN_Wopse57dhUAeG8pblDgck_Dd2', {
-                        action: 'send_email'
-                    }).then(function (token) {
-                        // Add token to form and then serialize the form. Then, send the data.
-                        $('#main-contact-form').prepend(
-                            '<input type="hidden" name="g-recaptcha-response" value="' +
-                            token + '">'); */
-                        $.ajax({
-                            url: "./php/mail.php",
-                            type: "POST",
-                            data: $('#main-contact-form').serialize(),
-                            success: function (data) {
-                                $("#respuesta").slideDown();
-                                $("#respuesta").html(data);
-                            }
-                        })
-                    // });;
-                // });
+                var form_status = $('<div class="form_status"></div>');
+                $.ajax({
+                    url: "./php/mail.php",
+                    type: "POST",
+                    beforeSend: function(){
+                        // Show loading spinner
+                        form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Sending email...</p>').fadeIn() );
+                    },
+                    data: form.serialize(),
+                    success: function (data) {
+                        // If email was successful, hide wrong answer block and show successful message
+                        $("#respuesta").slideDown();
+                        form_status.html(`<p class="text-success">${data}</p>`).delay(3000).fadeOut();
+                    },
+                    error: function(data) {
+                        // If email wasn't successful or captcha was invalid, hide success block and show wrong answer block with text from server
+                        form_status.html('');
+                        $("#respuesta").slideDown();
+                        $("#respuesta").html(data.responseText);
+                    }
+                })
                 return false;
             });
         });

@@ -36,9 +36,10 @@ if ($isHuman) {
         echo 'Message was not sent.';
         echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-        echo 'Message has been sent.';
+        echo 'Thank you for contacting us. We will get back to you as early as possible!';
     }
 } else {
+    http_response_code(502);
     echo 'Invalid ReCaptcha confirmation. Please, refresh the page and try again.';
 }
 

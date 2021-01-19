@@ -443,21 +443,6 @@ $(function() {
 		});
 	});
 
-	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Sending email...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contacting us. We will get back to you as early as possible! </p>').delay(3000).fadeOut();
-		});
-	});
-
 	//Pretty Photo
 	// $("a[rel^='prettyPhoto']").prettyPhoto({
 	// 	social_tools: false
