@@ -1,6 +1,6 @@
 <?php
 
-require 'cors.php';
+require_once 'cors.php';
 cors();
 header('Content-Type: application/json');
 
