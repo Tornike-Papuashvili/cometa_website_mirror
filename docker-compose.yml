@@ -15,9 +15,20 @@ services:
         - PHP_ERRORS_STDERR=TRUE
       ports:
         - "8010:80"
+      command: bash -c "apk add lua-resty-core 
+         && apk add --no-cache nginx-mod-http-lua 
+         && nginx -v 
+         && cd /
+         && ./start.sh"
+
       # This docker by default uses nginx:100 as process owner
       # This normally conflicts with the host /etc/passwd and leads to permission problems.
       # FIXME
       # map docker:/etc/passwd to an outside /etc/passwd 
       # use for example userid 1001 (normally gitlab-runner) 
       # user: "1001:1001"
+
+      # Error 2021-01-24
+      # cometa_website | 2021/01/24 13:35:55 [alert] 115#115: failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: module 'resty.core' not found:
+      # must use the following somewhere
+      # apk add lua-resty-core; apk add --no-cache nginx-mod-http-lua
