@@ -44,6 +44,8 @@ jQuery(function($) {'use strict';
 	 	$(this).closest('.panel-heading').toggleClass('active');
 	});
 
+	
+
 	//Initiat WOW JS
 	new WOW().init();
 	//smoothScroll
