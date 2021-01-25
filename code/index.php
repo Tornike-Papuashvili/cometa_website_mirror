@@ -662,8 +662,8 @@
     </section>
     <!--/#enterprise-->
 
-
-    <!-- <section id="pricing">
+<!--
+    <section id="pricing">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title text-center wow fadeInDown">Pricing Table</h2>
@@ -672,8 +672,7 @@
             <div class="pricings">
                 <div class="p-header">
                     <div class="p-header-content">
-                    <!-- Types of pricing models  -->
-
+ 
                         <div class="p-header-content-container">
                             <input type="radio" onclick="selectprice(1)" class="p-radio" id="Planid_0" name="Pricing">
                             <label for="Planid_0" class="p-label">Free</label>
@@ -689,7 +688,7 @@
                     </div>
                 </div>
                 <table class="p-table">
-                    <!-- All the differences  -->
+
                     <tbody class="p-tbody">
                         <tr>
                             <td class="p-title">Price</td>
