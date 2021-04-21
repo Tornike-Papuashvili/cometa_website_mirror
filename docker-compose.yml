@@ -7,7 +7,7 @@ services:
       restart: always
       volumes:
         - ./:/cometa_website
-        - ./code/:/var/www/html/
+        - ./code/:/usr/share/nginx/html
       working_dir: /cometa_website
       ports:
         - "8011:80"
