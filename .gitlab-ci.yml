@@ -1,7 +1,7 @@
 stages:
   - deploy
 
-stage_deployment:
+master_deployment:
   stage: deploy
   script:
     - sudo mkdir -p /home/amvara/projects/cometa_website || true
@@ -9,3 +9,12 @@ stage_deployment:
   only:
     refs:
       - master
+
+stage_deployment:
+  stage: deploy
+  script:
+    - sudo mkdir -p /home/amvara/projects/cometa_website_stage || true
+    - sudo cp -rp . /home/amvara/projects/cometa_website_stage/.
+  only:
+    refs:
+      - Stage

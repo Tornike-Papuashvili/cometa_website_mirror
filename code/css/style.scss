@@ -24,6 +24,12 @@
 
 @font-face {
     font-family: Inter;
+    src: url(fonts/Inter-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Inter;
     src: url(fonts/Inter-SemiBold.ttf);
     font-weight: 600;
 }
@@ -40,6 +46,12 @@
     font-weight: 500;
 }
 
+@mixin light-theme {
+    html[theme=light] & {
+        @content;
+    }
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -47,6 +59,18 @@
 	font-size: 1rem;
 	font: inherit;
     box-sizing: border-box;
+}
+
+[data-lang] {
+    display: none;
+}
+
+html[lang=en] [data-lang=en] {
+    display: inline-block;
+}
+
+html[lang=de] [data-lang=de] {
+    display: inline-block;
 }
 
 em {
@@ -59,6 +83,11 @@ body {
 	font-size: 16px;
 	background-color: $body-bg-color;
     color: $text-color;
+    @include light-theme {
+        color: $body-light-color;
+        font-weight: 300;
+        background-color: $body-bg-light-color;
+    }
 }
 
 header {
@@ -74,11 +103,16 @@ header {
     justify-content: space-between;
     color: $text-color;
     padding: 0 30px;
+    transition: top .2s ease-in-out;
+    @include light-theme {
+        background-color: $body-light-color;
+    }
     .theme-switcher {
         display: flex;
         justify-content: center;
         align-items: center;
         .switch {
+            cursor: pointer;
             width: 35px;
             height: 18px;
             border: 2px solid white;
@@ -95,18 +129,18 @@ header {
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                transition: all .3s ease-in-out;
-                &.right {
-                    right: 4px;
-                }
-                &.left {
-                    left: 4px;
+                transition: all .15s ease-in-out;
+                @include light-theme {
+                    right: 20px;
                 }
             }
         }
-        .item.selected {
-            color: $text-highlighted-color;
-            font-weight: 500;
+        .item {
+            cursor: pointer;
+            &.selected {
+                color: $text-highlighted-color;
+                font-weight: 500;
+            }
         }
     }
     .language-switcher {
@@ -117,10 +151,13 @@ header {
         .separator {
             margin: 0 5px;
         }
-        .lang.selected {
-            color: $yellow-text-color;
-            border-bottom: 1px solid $yellow-text-color;
-            font-weight: bold;
+        .lang {
+            cursor: pointer;
+            &.selected {
+                color: $yellow-text-color;
+                border-bottom: 1px solid $yellow-text-color;
+                font-weight: bold;
+            }
         }
     }
 }
@@ -133,6 +170,9 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+    @include light-theme {
+        background-color: $body-bg-light-color;
+    }
     @include for-tablet-landscape-up {
         flex-direction: row;
         height: calc(100vh - 80px);
@@ -153,6 +193,9 @@ main {
         background-size: calc(100vh - 80px);
         background-repeat: no-repeat;
         background-position: center;
+        @include light-theme {
+            filter: invert(1);
+        }
         @include for-tablet-landscape-up {
             background-size: calc(70vw);
         }
@@ -160,6 +203,9 @@ main {
     .text {
         padding: 0 30px;
         line-height: 24px;
+        @include light-theme {
+            color: $body-light-color;
+        }
         color: $text-color;
         font-size: 1.1rem;
         @include for-tablet-portrait-up {
@@ -179,6 +225,9 @@ main {
         }
         b {
             color: white;
+            @include light-theme {
+                color: $body-light-color;
+            }
         }
     }
 }
@@ -216,10 +265,12 @@ main {
     & > div:not(:last-child) {
         margin-bottom: 50px;
     }
-    a {
-        display: inline-block;
-        text-decoration: none;
+    .title {
+        display: block;
         margin-bottom: 10px;
+    }
+    a {
+        text-decoration: none;
         font-weight: bold;
         border-bottom-width: 2px;
         border-bottom-style: solid;
@@ -251,6 +302,9 @@ footer {
     flex-direction: column;
     padding: 50px 30px;
     background-color: $footer-bg-color;
+    @include light-theme {
+        background-color: $body-light-color;
+    }
     .metas {
         display: flex;
         flex-direction: column;

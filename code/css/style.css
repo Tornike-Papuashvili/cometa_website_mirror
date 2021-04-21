@@ -1,5 +1,6 @@
 /* Defines breakpoints for mobile and desktop */
 /* Colors */
+/* Light Theme Colors */
 /* Sizes, Margins, Paddings and Dimensions */
 /* Custom Fonts */
 @font-face {
@@ -16,6 +17,11 @@
   font-family: Inter;
   src: url(fonts/Inter-ExtraLight.ttf);
   font-weight: 200;
+}
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter-Light.ttf);
+  font-weight: 300;
 }
 @font-face {
   font-family: Inter;
@@ -41,6 +47,18 @@
   box-sizing: border-box;
 }
 
+[data-lang] {
+  display: none;
+}
+
+html[lang=en] [data-lang=en] {
+  display: inline-block;
+}
+
+html[lang=de] [data-lang=de] {
+  display: inline-block;
+}
+
 em {
   color: #E2B154;
 }
@@ -51,6 +69,11 @@ body {
   font-size: 16px;
   background-color: #111111;
   color: #FAFAFA;
+}
+html[theme=light] body {
+  color: #343333;
+  font-weight: 300;
+  background-color: #FAFAFA;
 }
 
 header {
@@ -66,6 +89,10 @@ header {
   justify-content: space-between;
   color: #FAFAFA;
   padding: 0 30px;
+  transition: top 0.2s ease-in-out;
+}
+html[theme=light] header {
+  background-color: #343333;
 }
 header .theme-switcher {
   display: flex;
@@ -73,6 +100,7 @@ header .theme-switcher {
   align-items: center;
 }
 header .theme-switcher .switch {
+  cursor: pointer;
   width: 35px;
   height: 18px;
   border: 2px solid white;
@@ -90,13 +118,13 @@ header .theme-switcher .switch .point {
   top: 0;
   bottom: 0;
   margin: auto;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
-header .theme-switcher .switch .point.right {
-  right: 4px;
+html[theme=light] header .theme-switcher .switch .point {
+  right: 20px;
 }
-header .theme-switcher .switch .point.left {
-  left: 4px;
+header .theme-switcher .item {
+  cursor: pointer;
 }
 header .theme-switcher .item.selected {
   color: #DADADA;
@@ -111,6 +139,9 @@ header .language-switcher {
 header .language-switcher .separator {
   margin: 0 5px;
 }
+header .language-switcher .lang {
+  cursor: pointer;
+}
 header .language-switcher .lang.selected {
   color: #E2B154;
   border-bottom: 1px solid #E2B154;
@@ -124,6 +155,9 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+html[theme=light] main {
+  background-color: #FAFAFA;
 }
 @media (min-width: 900px) {
   main {
@@ -148,6 +182,9 @@ main .logo {
   background-repeat: no-repeat;
   background-position: center;
 }
+html[theme=light] main .logo {
+  filter: invert(1);
+}
 @media (min-width: 900px) {
   main .logo {
     background-size: calc(70vw);
@@ -158,6 +195,9 @@ main .text {
   line-height: 24px;
   color: #FAFAFA;
   font-size: 1.1rem;
+}
+html[theme=light] main .text {
+  color: #343333;
 }
 @media (min-width: 600px) {
   main .text {
@@ -182,6 +222,9 @@ main .text p:not(:last-child) {
 }
 main .text b {
   color: white;
+}
+html[theme=light] main .text b {
+  color: #343333;
 }
 
 .video {
@@ -223,10 +266,12 @@ main .text b {
 .links > div:not(:last-child) {
   margin-bottom: 50px;
 }
-.links a {
-  display: inline-block;
-  text-decoration: none;
+.links .title {
+  display: block;
   margin-bottom: 10px;
+}
+.links a {
+  text-decoration: none;
   font-weight: bold;
   border-bottom-width: 2px;
   border-bottom-style: solid;
@@ -257,6 +302,9 @@ footer {
   flex-direction: column;
   padding: 50px 30px;
   background-color: #0D0D0D;
+}
+html[theme=light] footer {
+  background-color: #343333;
 }
 footer .metas {
   display: flex;
