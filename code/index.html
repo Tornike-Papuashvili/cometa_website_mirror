@@ -181,24 +181,22 @@
                 document.documentElement.setAttribute('theme', theme);
             }
         }
-        // Add sticky header effect on Desktop devices
-        if (screen.width >= 1200) {
-            var header = document.querySelector('header');
-            var lastScroll = window.pageYOffset || 0;
-            
-            // Handle scroll event
-            window.addEventListener("scroll", () => {
-                const currentScroll = window.pageYOffset;
-                if (currentScroll > lastScroll && currentScroll > 200) {
-                    // Is scrolling down
-                    header.style.top = '-' + header.offsetHeight + 'px';
-                } else if (currentScroll < lastScroll) {
-                    // Is scrolling up
-                    header.style.top = 0;
-                }
-                lastScroll = currentScroll;
-            });
-        }
+        // Sticky header
+        var header = document.querySelector('header');
+        var lastScroll = window.pageYOffset || 0;
+        
+        // Handle scroll event
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 200) {
+                // Is scrolling down
+                header.style.top = '-' + header.offsetHeight + 'px';
+            } else if (currentScroll < lastScroll) {
+                // Is scrolling up
+                header.style.top = 0;
+            }
+            lastScroll = currentScroll;
+        });
     </script>
 </body>
 </html>
