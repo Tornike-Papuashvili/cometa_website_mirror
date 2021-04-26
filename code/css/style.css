@@ -69,6 +69,15 @@ body {
   font-size: 16px;
   background-color: #111111;
   color: #FAFAFA;
+  background-image: url("../media/img/SVG/SVG/cometa.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 80% 0%;
+}
+@media (min-width: 600px) {
+  body {
+    height: calc(100vh - 80px - 40vh);
+  }
 }
 html[theme=light] body {
   color: #343333;
@@ -176,14 +185,15 @@ html[theme=light] main {
 }
 main .logo {
   width: 100%;
-  height: calc(100vh - 80px - 40vh);
-  background-image: url("../media/img/SVG/SVG/Asset 5.svg");
-  background-size: calc(100vh - 80px);
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 70vw;
 }
 html[theme=light] main .logo {
   filter: invert(1);
+}
+@media (min-width: 600px) {
+  main .logo {
+    height: calc(100vh - 80px - 40vh);
+  }
 }
 @media (min-width: 900px) {
   main .logo {

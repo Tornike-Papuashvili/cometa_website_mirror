@@ -83,6 +83,13 @@ body {
 	font-size: 16px;
 	background-color: $body-bg-color;
     color: $text-color;
+    background-image: url("../media/img/SVG/SVG/cometa.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 80% 0%;
+    @include for-tablet-portrait-up {
+        height: calc(100vh - 80px - 40vh);
+    }
     @include light-theme {
         color: $body-light-color;
         font-weight: 300;
@@ -188,13 +195,16 @@ main {
     }
     .logo {
         width: 100%;
-        height: calc(100vh - 80px - 40vh);
-        background-image: url('../media/img/SVG/SVG/Asset 5.svg');
-        background-size: calc(100vh - 80px);
-        background-repeat: no-repeat;
-        background-position: center;
+        height: 70vw;
+        // background-image: url('../media/img/SVG/SVG/Asset 5.svg');
+        // background-size: calc(100vh - 80px);
+        // background-repeat: no-repeat;
+        // background-position: center;
         @include light-theme {
             filter: invert(1);
+        }
+        @include for-tablet-portrait-up {
+            height: calc(100vh - 80px - 40vh);
         }
         @include for-tablet-landscape-up {
             background-size: calc(70vw);
