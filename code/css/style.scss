@@ -233,7 +233,7 @@ main {
         }
         @include for-desktop-up {
             font-size: 1.0vw !important;
-            padding-right: 150px;
+            padding-right: 150px !important;
         }
         p:not(:last-child) {
             margin-bottom: 20px;
