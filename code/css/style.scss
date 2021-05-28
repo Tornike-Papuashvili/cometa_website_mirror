@@ -215,7 +215,7 @@ main {
         }
     }
     .text {
-        padding: 0 150px;
+        padding: 0 30px;
         line-height: 24px;
         @include light-theme {
             color: $body-light-color;
@@ -227,6 +227,7 @@ main {
         }
         @include for-tablet-landscape-up {
             padding-left: 5%;
+            padding-right: 150px;
             p {
                 line-height: calc(2vw);
             }
