@@ -69,10 +69,6 @@ body {
   font-size: 16px;
   background-color: #111111;
   color: #FAFAFA;
-  background-image: url("../media/img/SVG/SVG/cometa.svg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 80% 0%;
 }
 @media (min-width: 600px) {
   body {
@@ -83,6 +79,18 @@ html[theme=light] body {
   color: #343333;
   font-weight: 300;
   background-color: #FAFAFA;
+}
+
+.cometa_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url("../media/img/SVG/SVG/cometa.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+html[theme=light] .cometa_bg {
+  filter: invert(1);
 }
 
 header {
@@ -144,6 +152,7 @@ header .language-switcher {
   justify-content: center;
   align-items: center;
   color: text-highlighted-color;
+  padding-top: 10px;
 }
 header .language-switcher .separator {
   margin: 0 5px;
@@ -159,7 +168,7 @@ header .language-switcher .lang.selected {
 
 /* MAIN PAGE STYLE */
 main {
-  margin-top: 80px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,21 +183,18 @@ html[theme=light] main {
     height: calc(100vh - 80px);
   }
   main .text {
-    order: 1;
+    order: 2;
     text-align: left !important;
   }
   main .logo {
-    order: 2;
+    order: 1;
     height: auto !important;
     padding-top: 50%;
   }
 }
 main .logo {
-  width: 100%;
+  width: 50%;
   height: 70vw;
-}
-html[theme=light] main .logo {
-  filter: invert(1);
 }
 @media (min-width: 600px) {
   main .logo {
@@ -201,7 +207,7 @@ html[theme=light] main .logo {
   }
 }
 main .text {
-  padding: 0 30px;
+  padding: 0 150px;
   line-height: 24px;
   color: #FAFAFA;
   font-size: 1.1rem;
@@ -224,7 +230,7 @@ html[theme=light] main .text {
 }
 @media (min-width: 1200px) {
   main .text {
-    font-size: 1.2vw !important;
+    font-size: 1vw !important;
   }
 }
 main .text p:not(:last-child) {
@@ -239,9 +245,9 @@ html[theme=light] main .text b {
 
 .videos {
   display: flex;
-  margin: 50px 0;
+  margin: 50px 0%;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -251,12 +257,12 @@ html[theme=light] main .text b {
 }
 @media (min-width: 600px) {
   .videos .video-wrapper {
-    padding: 2% 5%;
+    padding: 0% 2% 2% 0%;
   }
 }
 @media (min-width: 1200px) {
   .videos .video-wrapper {
-    flex: 0 50%;
+    flex: 1 50%;
   }
 }
 .videos .video-wrapper .title {

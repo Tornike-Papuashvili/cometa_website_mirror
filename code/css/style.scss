@@ -83,10 +83,6 @@ body {
 	font-size: 16px;
 	background-color: $body-bg-color;
     color: $text-color;
-    background-image: url("../media/img/SVG/SVG/cometa.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 80% 0%;
     @include for-tablet-portrait-up {
         height: calc(100vh - 80px - 40vh);
     }
@@ -94,6 +90,19 @@ body {
         color: $body-light-color;
         font-weight: 300;
         background-color: $body-bg-light-color;
+    }
+}
+
+
+.cometa_bg {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-image: url("../media/img/SVG/SVG/cometa.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include light-theme {
+        filter: invert(1);
     }
 }
 
@@ -118,6 +127,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        
         .switch {
             cursor: pointer;
             width: 35px;
@@ -155,6 +165,7 @@ header {
         justify-content: center;
         align-items: center;
         color: text-highlighted-color;
+        padding-top:10px;
         .separator {
             margin: 0 5px;
         }
@@ -172,7 +183,7 @@ header {
  /* MAIN PAGE STYLE */
 
 main {
-    margin-top: $header-height;
+    margin-top: $header-height + 20;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -184,25 +195,18 @@ main {
         flex-direction: row;
         height: calc(100vh - 80px);
         .text {
-            order: 1;
+            order: 2;
             text-align: left !important;
         }
         .logo {
-            order: 2;
+            order: 1;
             height: auto !important;
             padding-top: 50%;
         }
     }
     .logo {
-        width: 100%;
+        width: 50%;
         height: 70vw;
-        // background-image: url('../media/img/SVG/SVG/Asset 5.svg');
-        // background-size: calc(100vh - 80px);
-        // background-repeat: no-repeat;
-        // background-position: center;
-        @include light-theme {
-            filter: invert(1);
-        }
         @include for-tablet-portrait-up {
             height: calc(100vh - 80px - 40vh);
         }
@@ -211,7 +215,7 @@ main {
         }
     }
     .text {
-        padding: 0 30px;
+        padding: 0 150px;
         line-height: 24px;
         @include light-theme {
             color: $body-light-color;
@@ -228,7 +232,7 @@ main {
             }
         }
         @include for-desktop-up {
-            font-size: 1.2vw !important;
+            font-size: 1.0vw !important;
         }
         p:not(:last-child) {
             margin-bottom: 20px;
@@ -243,19 +247,20 @@ main {
 }
 .videos {
 	display: flex;
-    margin: 50px 0;
+    margin: 50px 0%;
     width: 100%;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
     flex-wrap: wrap;
     .video-wrapper {
         flex: 1 100%;
         padding: 0 30px;
         @include for-tablet-portrait-up {
-            padding: 2% 5%;
+            padding: 0% 2% 2% 0%;
         }
         @include for-desktop-up {
-            flex: 0 50%;
+            flex: 1 50%;
+
         }
         .title {
             margin-top: 30px;
