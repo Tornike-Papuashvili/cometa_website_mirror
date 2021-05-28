@@ -227,13 +227,13 @@ main {
         }
         @include for-tablet-landscape-up {
             padding-left: 5%;
-            padding-right: 150px;
             p {
                 line-height: calc(2vw);
             }
         }
         @include for-desktop-up {
             font-size: 1.0vw !important;
+            padding-right: 150px;
         }
         p:not(:last-child) {
             margin-bottom: 20px;
