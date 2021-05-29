@@ -101,6 +101,7 @@ body {
     background-image: url("../media/img/SVG/SVG/cometa.svg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    z-index: -9999;
     @include light-theme {
         filter: invert(1);
     }

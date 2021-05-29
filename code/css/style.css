@@ -88,6 +88,7 @@ html[theme=light] body {
   background-image: url("../media/img/SVG/SVG/cometa.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: -9999;
 }
 html[theme=light] .cometa_bg {
   filter: invert(1);
