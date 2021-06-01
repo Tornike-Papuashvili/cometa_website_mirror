@@ -264,7 +264,7 @@ html[theme=light] main .text {
 @media (min-width: 1200px) {
   main .text {
     padding-left: 5%;
-    paddin-top: 100px;
+    padding-top: 100px;
     width: 50vw;
   }
 }
