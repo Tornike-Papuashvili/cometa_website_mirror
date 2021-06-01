@@ -47,6 +47,10 @@
   box-sizing: border-box;
 }
 
+i {
+  font-style: italic;
+}
+
 [data-lang] {
   display: none;
 }
@@ -78,20 +82,30 @@ body {
 html[theme=light] body {
   color: #343333;
   font-weight: 300;
-  background-color: #FAFAFA;
+  background-color: #FAFAFA !important;
+}
+
+h1 {
+  font-size: medium;
+  font-weight: bold;
 }
 
 .cometa_bg {
-  position: fixed;
   width: 100%;
   height: 100%;
   background-image: url("../media/img/SVG/SVG/cometa.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: -10VW 10VW;
   z-index: -9999;
 }
 html[theme=light] .cometa_bg {
   filter: invert(1);
+}
+@media (min-width: 600px) {
+  .cometa_bg {
+    position: fixed;
+  }
 }
 
 header {
@@ -175,9 +189,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-html[theme=light] main {
-  background-color: #FAFAFA;
-}
 @media (min-width: 900px) {
   main {
     flex-direction: row;
@@ -189,13 +200,19 @@ html[theme=light] main {
   }
   main .logo {
     order: 1;
-    height: auto !important;
     padding-top: 50%;
   }
 }
 main .logo {
-  width: 50%;
+  width: 100%;
   height: 70vw;
+  background-image: url("../media/img/SVG/SVG/cometa.svg");
+  background-repeat: no-repeat;
+  background-position: -10VW 10VW;
+  z-index: -9999;
+}
+html[theme=light] main .logo {
+  filter: invert(1);
 }
 @media (min-width: 600px) {
   main .logo {
@@ -205,6 +222,20 @@ main .logo {
 @media (min-width: 900px) {
   main .logo {
     background-size: calc(70vw);
+    background-position: -10VW -5VW;
+  }
+}
+@media (min-width: 1200px) {
+  main .logo {
+    background-position: -10VW 0VW;
+    background-attachment: fixed;
+    position: fixed;
+    height: 100vw;
+  }
+}
+@media (min-width: 1200px) {
+  main .spacer {
+    width: 40vw;
   }
 }
 main .text {
@@ -212,6 +243,7 @@ main .text {
   line-height: 24px;
   color: #FAFAFA;
   font-size: 1.1rem;
+  width: 75vw;
 }
 html[theme=light] main .text {
   color: #343333;
@@ -223,7 +255,7 @@ html[theme=light] main .text {
 }
 @media (min-width: 900px) {
   main .text {
-    padding-left: 5%;
+    width: 170vw;
   }
   main .text p {
     line-height: calc(2vw);
@@ -231,7 +263,9 @@ html[theme=light] main .text {
 }
 @media (min-width: 1200px) {
   main .text {
-    font-size: 1vw !important;
+    padding-left: 5%;
+    paddin-top: 100px;
+    width: 50vw;
   }
 }
 main .text p:not(:last-child) {
@@ -242,6 +276,13 @@ main .text b {
 }
 html[theme=light] main .text b {
   color: #343333;
+}
+main .text .testimonials {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+main .text .testimonial_from {
+  font-size: 0.95rem;
 }
 
 .videos {
