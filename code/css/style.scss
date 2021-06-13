@@ -118,6 +118,15 @@ h1 {
     }    
 }
 
+/* headline / ueberschrift is a tag that marks titles above a text as headline - like h1 */
+.headline {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+/* Header is the element at the top of the page with the language switcher */
 header {
     position: fixed;
     top: 0;
@@ -192,7 +201,7 @@ header {
     }
 }
 
- /* MAIN PAGE STYLE */
+/* MAIN PAGE STYLE */
 
 main {
     margin-top: $header-height + 20;
