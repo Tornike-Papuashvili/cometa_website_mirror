@@ -468,4 +468,58 @@ b {
   font-family: initial;
 }
 
+.donate {
+  cursor: pointer;
+}
+
+.select-donate {
+  margin-top: 20px;
+}
+.select-donate .inline > * {
+  display: inline-block;
+}
+.select-donate button {
+  background-color: #111111;
+  border-radius: 3px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #E2B154;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  font-weight: 400;
+}
+.select-donate button:hover, .select-donate button.active {
+  background-color: #E2B154;
+  color: #111111;
+}
+.select-donate button:not(:last-child) {
+  margin-right: 10px;
+}
+.select-donate input {
+  background-color: #111111;
+  border-radius: 3px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border: 1px solid #E2B154;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  width: 100px;
+}
+
+.create-checkout {
+  margin-top: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /*# sourceMappingURL=style.css.map */

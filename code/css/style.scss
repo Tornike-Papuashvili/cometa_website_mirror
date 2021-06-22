@@ -458,3 +458,58 @@ b {
 .emoji {
     font-family: initial;
 }
+
+.donate {
+    cursor: pointer;
+}
+
+.select-donate {
+    margin-top: 20px;
+    .inline > * {
+        display: inline-block;
+    }
+    button {
+        background-color: $body-bg-color;
+        border-radius: 3px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border: 1px solid $yellow-text-color;
+        color: rgba(white, .9);
+        cursor: pointer;
+        font-weight: 400;
+        &:hover,
+        &.active {
+            background-color: $yellow-text-color;
+            color: $body-bg-color;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    input {
+        background-color: $body-bg-color;
+        border-radius: 3px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border: 1px solid $yellow-text-color;
+        color: rgba(white, .9);
+        font-weight: 400;
+        width: 100px;
+    }
+}
+
+.create-checkout {
+    margin-top: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

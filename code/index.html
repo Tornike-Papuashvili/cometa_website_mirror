@@ -11,6 +11,8 @@
     <meta name="keywords" content="automated software testing,web testing tools,browser automation,ui testing,automated web testing,gui testing tools,web macro,web ui testing,ui testing framework,ui automation,automated ui testing,web automation,website automation,usertesting,user testing,testing usability,web usability,usability test,usability testing,online usability testing tools,usability testing software,remote user testing,website usability testing,mobile user testing">
     <link rel="canonical" href="https://cometa-stage.amvara.consulting/">
     <link rel="icon" href="favicon.ico">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="axios.min.js"></script>
     <title>Co.meta</title>
 </head>
 <body>
@@ -167,6 +169,7 @@
 
         <div>
             <div class="title">
+                <br>
                 <a href="https://bit.ly/38AnLJi" class="join" data-lang="en">Join Co.meta Waiting List</a>
                 <a href="https://bit.ly/38AnLJi" class="join" data-lang="de">Auf die Co.meta-Warteliste setzen lassen</a>
             </div>
@@ -175,11 +178,26 @@
         </div>
         <div>
             <div class="title">
-                <a href="https://bit.ly/38AnLJi" class="donate" data-lang="en">Donate</a>
-                <a href="https://bit.ly/38AnLJi" class="donate" data-lang="de">Spende</a>
+                <a class="donate" data-lang="en">
+                    <span data-lang="en">Donate</span>
+                    <span data-lang="de">Spende</span>
+                </a>
             </div>
             <p data-lang="en">Show that you understand where we are going. Express that you are more than interested ...</p>
             <p data-lang="de">Zeigen Sie, dass Sie verstehen, wohin die Reise geht. Drücken Sie aus, dass Sie mehr als interessiert sind ...</p>
+            <div class="select-donate" style="display: none;">
+                <div class="inline">
+                    <button data-amount="10">10 €</button>
+                    <button data-amount="20">20 €</button>
+                    <button data-amount="30">30 €</button>
+                    <button data-amount="40">40 €</button>
+                    <button data-amount="50">50 €</button>
+                    <button data-amount="100">100 €</button>
+                    <div class="custom-donate">Custom amount:</div>
+                    <input type="number" class="donate-input">
+                </div>
+                <button style="display: none;" class="create-checkout">Donate with Stripe</button>
+            </div>
         </div>
     </div>
     <footer>
@@ -188,8 +206,10 @@
                 <div class="title">Co.meta</div>
                 <ul>
                     <li>
-                        <a href="https://bit.ly/38AnLJi" data-lang="en">Donate</a>
-                        <a href="https://bit.ly/38AnLJi" data-lang="de">Spende</a>
+                        <a class="donate">
+                            <span data-lang="en">Donate</span>
+                            <span data-lang="de">Spende</span>
+                        </a>
                     </li>
                     <li>
                         <a href="https://bit.ly/38AnLJi" data-lang="en">Documents</a>
