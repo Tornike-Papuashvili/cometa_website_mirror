@@ -13,6 +13,7 @@ master_deployment:
 stage_deployment:
   stage: deploy
   script:
+    - sed -i 's/@@COMETA_STRIPE_PUBLIC_KEY@@/'$COMETA_STRIPE_PUBLIC_TEST_KEY'/g' code/cometa.js
     - sudo mkdir -p /home/amvara/projects/cometa_website_stage || true
     - sudo cp -rp . /home/amvara/projects/cometa_website_stage/.
     - cd /home/amvara/projects/cometa_website_stage/
