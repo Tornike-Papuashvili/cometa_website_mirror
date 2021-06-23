@@ -53,6 +53,7 @@ window.addEventListener("scroll", () => {
 var stripe = Stripe('pk_test_51ItEnUBleSoMrhiQA3sLLyJDtzfWKGP5ZtZtDz2IE19MhsQN7RyCvAMmzbwqtwgBTqLEscWUDn7DNtqLckYMsW5c00JkHCY0bX');
 // Handle for when user click on Donate
 function enableDonate() {
+    document.querySelector('.donate-result').style.display = 'none';
     // Show donation buttons
     document.querySelector('.select-donate').style.display = 'block';
     // Scroll to donate section
@@ -102,6 +103,7 @@ document.querySelector('.select-donate input').addEventListener('input', selectC
 
 // Check if the amount value if provided
 function checkAmountValue() {
+    document.querySelector('.donate-result').style.display = 'none';
     var amount = null;
     var input = document.querySelector('.select-donate input');
     var btnActive = document.querySelector('.select-donate button[data-amount].active');
@@ -125,10 +127,22 @@ function checkAmountValue() {
 // Create checkout session with provided amount and redirect to checkout
 function createCheckout() {
     var amount = +this.getAttribute('data-checkout-amount')
-    axios.post('https://stage.cometa.rocks/backend/createDonation/', {
+    axios.post('https://localhost/backend/createDonation/', {
         amount: amount
     }).then(function (response) {
-        console.log(response);
+        var status = response.status;
+        if (status === 200) {
+            var data = response.data;
+            if (data.success) {
+                stripe.redirectToCheckout({
+                    sessionId: data.sessionId
+                })
+            } else {
+                alert(data.error)
+            }
+        } else {
+            alert(response.statusText)
+        }
     })
     .catch(function (error) {
         console.log(error);
@@ -136,3 +150,25 @@ function createCheckout() {
 }
 // Add click listener for checkout button
 document.querySelector('.create-checkout').addEventListener('click', createCheckout)
+
+function onPageLoad() {
+    // Handle donation callbacks
+    var queryString = window.location.search;
+    var params = new URLSearchParams(queryString);
+    var donation = params.get('donation');
+    if (donation) {
+        var resultDiv = document.querySelector('.donate-result');
+        resultDiv.style.display = 'block';
+        switch (donation) {
+            case 'success':
+                resultDiv.innerHTML = 'Thank you for your donation. We really appreciate your help!'
+                break;
+            case 'cancelled':
+                resultDiv.innerHTML = 'The donation page has been cancelled.'
+                break;
+        }
+        resultDiv.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+}
+
+window.addEventListener("load", onPageLoad);
