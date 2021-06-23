@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Initialize Stripe
-var stripe = Stripe('pk_test_51ItEnUBleSoMrhiQA3sLLyJDtzfWKGP5ZtZtDz2IE19MhsQN7RyCvAMmzbwqtwgBTqLEscWUDn7DNtqLckYMsW5c00JkHCY0bX');
+var stripe = Stripe('@@COMETA_STRIPE_PUBLIC_KEY@@');
 // Handle for when user click on Donate
 function enableDonate() {
     document.querySelector('.donate-result').style.display = 'none';
