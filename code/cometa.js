@@ -127,7 +127,7 @@ function checkAmountValue() {
 // Create checkout session with provided amount and redirect to checkout
 function createCheckout() {
     var amount = +this.getAttribute('data-checkout-amount')
-    axios.post('https://localhost/backend/createDonation/', {
+    axios.post('https://stage.cometa.rocks/backend/createDonation/', {
         amount: amount
     }).then(function (response) {
         var status = response.status;
