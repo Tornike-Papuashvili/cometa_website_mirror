@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+    <meta name="theme-color" content="#111111">
+    <meta name="author" content="COMETA ROCKS S.L.">
+    <meta name="version" content="1.0">
+    <meta name="keywords" content="automated software testing,web testing tools,browser automation,ui testing,automated web testing,gui testing tools,web macro,web ui testing,ui testing framework,ui automation,automated ui testing,web automation,website automation,usertesting,user testing,testing usability,web usability,usability test,usability testing,online usability testing tools,usability testing software,remote user testing,website usability testing,mobile user testing">
+    <link rel="canonical" href="https://cometa-stage.amvara.consulting/">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="axios.min.js"></script>
+    <title>Co.meta</title>
+</head>
+<body>
+    <div class="cometa_bg1"></div>
+    <header>
+        <div class="menu">
+             <!-- to be done -->
+        </div>
+        <div>
+            <div class="theme-switcher">
+                <div class="item light" onclick="changeTheme('light')">Light</div>
+                <div class="switch" onclick="changeTheme()">
+                    <div class="point right"></div>
+                </div>
+                <div class="item dark" onclick="changeTheme('dark')">Dark</div>
+            </div>
+            <div class="language-switcher">
+                <div class="lang" data-lang="de" onclick="changeLanguage('en')">EN</div>
+                <div class="lang selected" data-lang="en" onclick="changeLanguage('en')">EN</div>
+                <div class="separator">|</div>
+                <div class="lang" data-lang="en" onclick="changeLanguage('de')">DE</div>
+                <div class="lang selected" data-lang="de" onclick="changeLanguage('de')">DE</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="logo"></div>
+        <div class="spacer"></div>
+        <div class="text" data-lang="en">
+            <p>
+                <h1>We have been waiting for you!</h1>
+            </p>
+            <p>
+                Some do testing already, some do not. We know that. 
+            </p>
+            <p>
+                Testing can be a stressful job, manual testing is either fault prone or tedious.
+            </p>
+            <p>
+                Automated testing is often hard-code. 
+            </p>
+            <p>
+                And fixing testcases can be a fulltime job.
+            </p>
+            <p>
+                <b>Don’t break your code. Don’t break your layout. Relax.</b>
+            </p>
+            <div>
+                <div>
+                    <div class="testimonials"><h1>What co.meta users say</h1></div>
+                    <p>
+                        <i>
+                            &quot;Before I got to know co.meta, I couldn't imagine how easy it can be to automate tests without 
+                            in-depth programming knowledge. Automating tests so quickly and on a large scale with co.meta 
+                            is not only a big relief in my daily business, it is also fun to work with a product that 
+                            reflects the great experience and passion of its developers.&quot;
+                        </i>
+                        
+                        <p class="testimonial_from">
+                            Cornelia S., Test Manager (Finance Accounting IT Solutions)
+                            <br />Daimler AG
+                        </p>
+                    </p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="text" data-lang="de">
+            <p>
+                <h1>Wir haben auf Sie gewartet!</h1>
+            </p>
+            <p>
+                Einige testen bereits, andere nicht. Wir kennen das. 
+            </p>
+            <p>
+                Testing kann ein aufreibender Job sein, manuelles Testing ist entweder fehlerhaft oder sehr aufwendig.
+                Oder Sie haben noch nicht gesehen, wie einfach Sie auf verschiedenen Browsern und Geräten parallel testen können.
+            </p>
+            <p><li>Automatisieren Sie menschliche Aktionen auf Webseiten einfach in mehr als 2000 Geräten und mit Screenshots.</li></p>
+            <p>
+                <li><b>Co.meta</b> testet laufend die Funktionalität und führt visuelle Regressionstests mit Bildvergleich durch.</li>
+            </p> 
+            <p><li>Verschlüsseln Sie Ihre Daten, um sicherzustellen, dass sie niemals ohne Ihre Zustimmung verwendet werden.</li></p> 
+            <p><li>Integrieren Sie Co.meta reibungslos dank unserer REST API.</li></p>
+            <p>
+                <b>Machen Sie Ihren Code nicht kaputt. Machen Sie Ihr Layout nicht kaputt.</b>
+            </p>
+        </div>
+        <div>
+            
+        </div>
+
+    </main>
+
+    <div class="videos">
+        <div class="video-wrapper">
+        </div>
+        <div class="video-wrapper">
+            <div class="title">co.meta</div>
+            <div class="video">
+                <iframe src="https://www.youtube-nocookie.com/embed/s86rnmbLDpc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="title">co.meta in action</div>
+            <div class="video">
+                <iframe src="https://www.youtube-nocookie.com/embed/ZkWXdvxSJp0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="logo"></div>
+        <div class="spacer"></div>
+        <div class="text" data-lang="en">
+            <p>
+                <h1>Hightlights</h1>
+            </p>
+            <p>
+                100% Open Source: fork it, twist it, change it.
+            </p>
+            <p>
+                NO-CODE, LOW-CODE
+            </p>
+            <p> <li>Automate human actions on websites easily in more than 2000 devices and with screenshots.</li></p>
+            <p>
+                <li> co.meta continously tests functionality and performes visual regression tests with image comparison.</li>
+            </p> 
+            <p><li>Encrypt your data to ensure that it will never be used without your consent.</p> </li>
+            <p><li>Integrate co.meta smoothly thanks to the REST API.</li></p>
+            <p>Cometa is to mabl or lambdatest what is gitlab to github.</p>
+
+        </div>
+        <div class="text" data-lang="de">
+            <p>
+                <h1>Punkte die überzeugen!</h1>
+            </p>
+            <p>
+                100% Open Source: runterladen, installieren, ausprobieren, ändern.  
+            </p>
+            <p>
+                NO-CODE, LOW-CODE
+            </p>
+            <p><li>Automatisieren Sie menschliche Aktionen auf Webseiten einfach in mehr als 2000 Geräten und mit Screenshots.</li></p>
+            <p>
+                <li> co.meta testet laufend die Funktionalität und führt visuelle Regressionstests mit Bildvergleich durch.</li>
+            </p> 
+            <p><li>Verschlüsseln Sie Ihre Daten, um sicherzustellen, dass sie niemals ohne Ihre Zustimmung verwendet werden.</li></p> 
+            <p><li>Integrieren Sie co.meta reibungslos dank unserer REST API.</li></p>
+            <p>co.meta im Vergleich zu mabl oder lamda-test ist wie gitlab zu github.</p>
+
+        </div>
+    </main>
+
+    <div class="links">
+
+        <div>
+            <div class="title">
+                <br>
+                <a href="https://bit.ly/38AnLJi" class="join" data-lang="en">Join Co.meta Waiting List</a>
+                <a href="https://bit.ly/38AnLJi" class="join" data-lang="de">Auf die Co.meta-Warteliste setzen lassen</a>
+            </div>
+            <p data-lang="en">The open beta has ended. We invite you to join the waiting list. By doing so, you will be able to access our private repository and discussion channels on discord or slack. You have the exclusive opportunity to be part of the community before going public.</p>
+            <p data-lang="de">Die offene Beta ist beendet. Wir laden Sie ein, sich auf die Warteliste setzen zu lassen. Wenn Sie dies tun, können Sie auf unser privates Repository und die Diskussionskanäle auf Discord oder Slack zugreifen. Sie haben die exklusive Möglichkeit, Teil der Community zu sein, bevor wir an die Öffentlichkeit gehen.</p>
+        </div>
+        <div>
+            <div class="title">
+                <a class="donate" data-lang="en">
+                    <span data-lang="en">Donate</span>
+                    <span data-lang="de">Spende</span>
+                </a>
+            </div>
+            <p data-lang="en">Show that you understand where we are going. Express that you are more than interested ...</p>
+            <p data-lang="de">Zeigen Sie, dass Sie verstehen, wohin die Reise geht. Drücken Sie aus, dass Sie mehr als interessiert sind ...</p>
+            <div class="select-donate" style="display: none;">
+                <div class="inline">
+                    <button data-amount="10">10 €</button>
+                    <button data-amount="20">20 €</button>
+                    <button data-amount="30">30 €</button>
+                    <button data-amount="40">40 €</button>
+                    <button data-amount="50">50 €</button>
+                    <button data-amount="100">100 €</button>
+                    <div class="custom-donate">Custom amount:</div>
+                    <input type="number" class="donate-input">
+                </div>
+                <button style="display: none;" class="create-checkout">Donate with Stripe</button>
+            </div>
+            <div class="donate-result" style="display: none;"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="metas">
+            <div class="list">
+                <div class="title">Co.meta</div>
+                <ul>
+                    <li>
+                        <a class="donate">
+                            <span data-lang="en">Donate</span>
+                            <span data-lang="de">Spende</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bit.ly/38AnLJi" data-lang="en">Documents</a>
+                        <a href="https://bit.ly/38AnLJi" data-lang="de">Dokumente</a>
+                    </li>
+                    <li>
+                        <a href="https://bit.ly/38AnLJi" data-lang="en">Roadmap</a>
+                        <a href="https://bit.ly/38AnLJi" data-lang="de">Weiterentwicklung</a>
+                    </li>
+                    <li>
+                        <a href="https://bit.ly/38AnLJi" data-lang="en">Terms of Use</a>
+                        <a href="https://bit.ly/38AnLJi" data-lang="de">Nutzungsbedingungen</a>
+                    </li>
+                    <li>
+                        <a href="privacy.html" data-lang="en">Privacy Policy</a>
+                        <a href="privacy.html" data-lang="de">Datenschutzrichtlinie</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <div class="title" data-lang="en">Learn More</div>
+                <div class="title" data-lang="de">Erfahren Sie mehr</div>
+                <ul>
+                    <li>
+                        <a href="https://bit.ly/38AnLJi" data-lang="en">Updates</a>
+                        <a href="https://bit.ly/38AnLJi" data-lang="de">Aktualisierungen</a>
+                    </li>
+                    <li><a href="https://bit.ly/38AnLJi">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <div class="title" data-lang="en">Using Co.meta</div>
+                <div class="title" data-lang="de">Co.meta verwenden</div>
+                <ul>
+                    <li>
+                        <a href="https://calendso.com/ralf/cometa-demo" data-lang="en">Schedule a demo</a>
+                        <a href="https://calendso.com/ralf/cometa-demo" data-lang="de">Termin für Demo vereinbaren</a>
+                    </li>
+                    <li>
+                        <a href="/O/" data-lang="en">Getting Started</a>
+                        <a href="/O/" data-lang="de">Erste Schritte</a>
+                    </li>
+                    <li>
+                        <a href="/S/" data-lang="en">User Scenarios</a>
+                        <a href="/S/" data-lang="de">Anwender-Szenarien</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cometa-testing" data-lang="en">Developer Info</a>
+                        <a href="https://github.com/cometa-testing" data-lang="de">Entwickler-Infos</a>
+                    </li>
+                    <li>
+                        <a href="https://prod.cometa.rocks/" data-lang="en">Login to cometa cloud</a>
+                        <a href="https://prod.cometa.rocks/" data-lang="de">Anmeldung bei cometa cloud</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <div class="title" data-lang="en">Community & Help</div>
+                <div class="title" data-lang="de">Gemeinschaft & Hilfe</div>
+                <ul>
+                    <li>
+                        <a href="mailto:contact@cometa.rocks" data-lang="en">Contact Us</a>
+                        <a href="mailto:contact@cometa.rocks" data-lang="de">Kontakt</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/VeMbxJWxsg">Discord</a>
+                    </li>
+                    <li>
+                        <a href="https://matrix.to/#/!LqMzSzyPqrUFRqNiCt:matrix.org?via=matrix.org">Matrix</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cometa-testing">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/joinchat/bFquCBGPBCAwYWZk">Telegram</a>
+                    </li>
+                    <li>
+                        <a href="https://chat.whatsapp.com/CLIOla00LAf4Ym2mux8TXC">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright" data-lang="en">
+            <b>COMETA ROCKS S.L.</b> Software crafted with <span class="emoji">💚</span> in Barcelona/Europe.</div>
+        </div>
+        <div class="copyright" data-lang="de">
+            <b>COMETA ROCKS S.L.</b> Software mit <span class="emoji">💚</span> gemacht in Barcelona/Europa.</div>
+        </div>
+    </footer>
+    <script src="cometa.js">
+    </script>
+</body>
+</html>
