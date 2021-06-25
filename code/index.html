@@ -30,7 +30,7 @@
                 </div>
                 <div class="item dark" onclick="changeTheme('dark')">Dark</div>
             </div>
-            <div class="language-switcher">
+            <div class="language-switcher" style="display:none">
                 <div class="lang" data-lang="de" onclick="changeLanguage('en')">EN</div>
                 <div class="lang selected" data-lang="en" onclick="changeLanguage('en')">EN</div>
                 <div class="separator">|</div>
@@ -187,17 +187,20 @@
             <p data-lang="en">Show that you understand where we are going. Express that you are more than interested ...</p>
             <p data-lang="de">Zeigen Sie, dass Sie verstehen, wohin die Reise geht. Drücken Sie aus, dass Sie mehr als interessiert sind ...</p>
             <div class="select-donate" style="display: none;">
+                <p data-lang="en">Great to see your interest. Thank you so much. Let us know for what reason your are donating ...</p>
+                <p data-lang="de">Vielen Dank für Interesse uns zu helfen. Lassen Sie uns wissen, warum und wofür Sie spenden ... </p>
                 <div class="inline">
-                    <button data-amount="10">10 €</button>
-                    <button data-amount="20">20 €</button>
-                    <button data-amount="30">30 €</button>
-                    <button data-amount="40">40 €</button>
-                    <button data-amount="50">50 €</button>
-                    <button data-amount="100">100 €</button>
-                    <div class="custom-donate">Custom amount:</div>
+                    <div class="inline">
+                        <textarea data-lang="en" name="donate_reason" placeholder="Donate reason ..."></textarea>
+                    </div>
+                    <div>Helper <br><button data-amount="5">5 €</button></div>
+                    <div>Supporter<br><button data-amount="29">29 €</button></div>
+                    <div>Angel<br><button data-amount="149">149 €</button></div>
+                    <div class="custom-donate">Sponsor:</div>
                     <input type="number" class="donate-input">
                 </div>
-                <button style="display: none;" class="create-checkout">Donate with Stripe</button>
+                <button style="display: none;" class="create-checkout">monthly donation with Stripe</button>
+                Sent email to help@cometa.rocks, if you need to change anything with your donation. 
             </div>
             <div class="donate-result" style="display: none;"></div>
         </div>
@@ -208,7 +211,7 @@
                 <div class="title">Co.meta</div>
                 <ul>
                     <li>
-                        <a class="donate">
+                        <a class="donate" href="donate.html">
                             <span data-lang="en">Donate</span>
                             <span data-lang="de">Spende</span>
                         </a>
