@@ -478,6 +478,17 @@ b {
 .select-donate .inline > * {
   display: inline-block;
 }
+.select-donate .buttons {
+  display: grid;
+  grid-template-rows: repeat(2, 50px);
+  grid-template-columns: repeat(4, 100px);
+  grid-column-gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+.select-donate .email {
+  margin-top: 20px;
+}
 .select-donate button {
   background-color: #111111;
   border-radius: 3px;
@@ -491,9 +502,6 @@ b {
 .select-donate button:hover, .select-donate button.active {
   background-color: #E2B154;
   color: #111111;
-}
-.select-donate button:not(:last-child) {
-  margin-right: 10px;
 }
 .select-donate input {
   background-color: #111111;
@@ -526,6 +534,18 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+textarea {
+  background-color: #111111;
+  border: 1px solid #E2B154;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

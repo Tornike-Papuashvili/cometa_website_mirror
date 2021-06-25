@@ -157,14 +157,12 @@ function onPageLoad() {
     var params = new URLSearchParams(queryString);
     var donation = params.get('donation');
     if (donation) {
-        var resultDiv = document.querySelector('.donate-result');
-        resultDiv.style.display = 'block';
         switch (donation) {
             case 'success':
-                resultDiv.innerHTML = 'Thank you for your donation. We really appreciate your help!'
+                document.querySelector('.donate-result.success').style.display = 'block';
                 break;
             case 'cancelled':
-                resultDiv.innerHTML = 'The donation page has been cancelled.'
+                document.querySelector('.donate-result.failed').style.display = 'block';
                 break;
         }
         resultDiv.scrollIntoView({ block: 'center', behavior: 'smooth' });
