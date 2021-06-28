@@ -481,10 +481,25 @@ b {
 .select-donate .buttons {
   display: grid;
   grid-template-rows: repeat(2, 50px);
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, minmax(0, 100px));
   grid-column-gap: 10px;
   text-align: center;
   align-items: center;
+}
+@media (min-width: 600px) {
+  .select-donate .buttons {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+.select-donate .buttons .name,
+.select-donate .buttons .custom-donate {
+  font-size: 0.95rem;
+}
+@media (min-width: 600px) {
+  .select-donate .buttons .name,
+.select-donate .buttons .custom-donate {
+    font-size: 1.2rem;
+  }
 }
 .select-donate .email {
   margin-top: 20px;
@@ -492,12 +507,19 @@ b {
 .select-donate button {
   background-color: #111111;
   border-radius: 3px;
-  padding: 10px 15px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid #E2B154;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
   font-weight: 400;
+  font-size: 0.9rem;
+}
+@media (min-width: 600px) {
+  .select-donate button {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
 }
 .select-donate button:hover, .select-donate button.active {
   background-color: #E2B154;
@@ -506,12 +528,20 @@ b {
 .select-donate input {
   background-color: #111111;
   border-radius: 3px;
-  padding: 10px 15px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid #E2B154;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
-  width: 100px;
+  width: 80px;
+  font-size: 0.9rem;
+}
+@media (min-width: 600px) {
+  .select-donate input {
+    width: 100px;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+  }
 }
 
 .create-checkout {
