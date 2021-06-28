@@ -116,19 +116,25 @@ function checkAmountValue() {
     }
     // Show or hide Checkout button
     if (amount) {
-        document.querySelector('.create-checkout').style.display = 'block';
-        document.querySelector('.create-checkout').setAttribute('data-checkout-amount', amount);
+        document.querySelectorAll('.create-checkout').forEach(el => {
+            el.style.display = 'block';
+            el.setAttribute('data-checkout-amount', amount);
+        });
     } else {
-        document.querySelector('.create-checkout').style.display = 'none';
-        document.querySelector('.create-checkout').removeAttribute('data-checkout-amount');
+        document.querySelectorAll('.create-checkout').forEach(el => {
+            el.style.display = 'none';
+            el.removeAttribute('data-checkout-amount');
+        });
     }
 }
 
 // Create checkout session with provided amount and redirect to checkout
 function createCheckout() {
-    var amount = +this.getAttribute('data-checkout-amount')
+    var period = this.dataset.period;
+    var amount = +this.dataset.checkoutAmount;
     axios.post('https://stage.cometa.rocks/backend/createDonation/', {
-        amount: amount
+        amount: amount,
+        period: period
     }).then(function (response) {
         var status = response.status;
         if (status === 200) {
@@ -149,7 +155,9 @@ function createCheckout() {
     });
 }
 // Add click listener for checkout button
-document.querySelector('.create-checkout').addEventListener('click', createCheckout)
+document.querySelectorAll('.create-checkout').forEach(el => {
+    el.addEventListener('click', createCheckout);
+})
 
 function onPageLoad() {
     // Handle donation callbacks

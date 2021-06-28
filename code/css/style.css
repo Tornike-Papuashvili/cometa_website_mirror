@@ -478,6 +478,15 @@ b {
 .select-donate .inline > * {
   display: inline-block;
 }
+.select-donate .checkouts {
+  display: flex;
+}
+.select-donate .checkouts button {
+  flex: initial;
+}
+.select-donate .checkouts button:not(:first-child) {
+  margin-left: 20px;
+}
 .select-donate .buttons {
   display: grid;
   grid-template-rows: repeat(2, 50px);

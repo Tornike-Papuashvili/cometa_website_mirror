@@ -202,7 +202,10 @@
                     <button data-amount="149">149 €</button>
                     <input type="number" placeholder="Custom" class="donate-input">
                 </div>
-                <button style="display: none;" class="create-checkout">Monthly donation with Stripe</button>
+                <div class="checkouts">
+                    <button style="display: none;" data-period="month" class="create-checkout">Monthly donation</button>
+                    <button style="display: none;" data-period="year" class="create-checkout">Yearly donation</button>
+                </div>
                 <div class="email">Sent email to help@cometa.rocks, if you need to change anything with your donation.</div>
             </div>
             <div class="success donate-result" style="display: none;">Thank you for your donation. We really appreciate your help!</div>
