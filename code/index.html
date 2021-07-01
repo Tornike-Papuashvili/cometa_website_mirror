@@ -189,20 +189,27 @@
             <div class="select-donate" style="display: none;">
                 <p data-lang="en">Great to see your interest. Thank you so much. Let us know for what reason your are donating ...</p>
                 <p data-lang="de">Vielen Dank für Interesse uns zu helfen. Lassen Sie uns wissen, warum und wofür Sie spenden ... </p>
-                <div class="inline">
-                    <div class="inline">
-                        <textarea data-lang="en" name="donate_reason" placeholder="Donate reason ..."></textarea>
-                    </div>
-                    <div>Helper <br><button data-amount="5">5 €</button></div>
-                    <div>Supporter<br><button data-amount="29">29 €</button></div>
-                    <div>Angel<br><button data-amount="149">149 €</button></div>
-                    <div class="custom-donate">Sponsor:</div>
-                    <input type="number" class="donate-input">
+                <div class="reason">
+                    <textarea data-lang="en" name="donate_reason" placeholder="Donate reason ..."></textarea>
                 </div>
-                <button style="display: none;" class="create-checkout">monthly donation with Stripe</button>
-                Sent email to help@cometa.rocks, if you need to change anything with your donation. 
+                <div class="buttons">
+                    <div class="name">Helper</div>
+                    <div class="name">Supporter</div>
+                    <div class="name">Angel</div>
+                    <div class="custom-donate">Sponsor</div>
+                    <button data-amount="5">5 €</button>
+                    <button data-amount="29">29 €</button>
+                    <button data-amount="149">149 €</button>
+                    <input type="number" placeholder="Custom" class="donate-input">
+                </div>
+                <div class="checkouts">
+                    <button style="display: none;" data-period="month" class="create-checkout">Monthly donation</button>
+                    <button style="display: none;" data-period="year" class="create-checkout">Yearly donation</button>
+                </div>
+                <div class="email">Sent email to help@cometa.rocks, if you need to change anything with your donation.</div>
             </div>
-            <div class="donate-result" style="display: none;"></div>
+            <div class="success donate-result" style="display: none;">Thank you for your donation. We really appreciate your help!</div>
+            <div class="failed donate-result" style="display: none;">The donation page has been cancelled.</div>
         </div>
     </div>
     <footer>
