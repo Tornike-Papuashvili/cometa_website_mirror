@@ -214,10 +214,11 @@ main {
 }
 main .logo {
   width: 100%;
-  height: 70vw;
+  height: 100vw;
   background-image: url("../media/img/SVG/SVG/cometa.svg");
   background-repeat: no-repeat;
-  background-position: -10VW 10VW;
+  background-position: -10VW -10VW;
+  background-size: cover;
   z-index: -9999;
 }
 html[theme=light] main .logo {
@@ -248,7 +249,7 @@ html[theme=light] main .logo {
   }
 }
 main .text {
-  padding: 0 30px;
+  padding: 0px;
   line-height: 24px;
   color: #FAFAFA;
   font-size: 1.1rem;
