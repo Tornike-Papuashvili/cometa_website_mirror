@@ -17,7 +17,7 @@ if (initialTheme === 'light' || initialTheme === 'dark') {
 }
 function changeLanguage(lang) {
     // Update DOM
-    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('cometa-lang', lang);
     localStorage.setItem('lang', lang);
 }
 function changeTheme(theme) {
