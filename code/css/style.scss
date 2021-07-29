@@ -288,6 +288,16 @@ main {
             margin-top: 50px;
             margin-bottom: 25px;
         }
+        .testimonial {
+            padding: 50px 10px 10px 10px;
+            font-family: 'Times New roman';
+            border: 1px solid #E2B154;
+            border-radius: 15px;
+            @include for-tablet-portrait-up {
+                padding: 50px;
+                padding-bottom: 25px;
+            }
+        }
         .testimonial_from {
             font-size: 0.95rem;
         }
