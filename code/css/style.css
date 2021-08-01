@@ -255,6 +255,18 @@ main .text {
   font-size: 1.1rem;
   width: 75vw;
 }
+main .text a {
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+main .text a.join {
+  color: #E2B154;
+  border-bottom-color: #E2B154;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
 html[theme=light] main .text {
   color: #343333;
 }

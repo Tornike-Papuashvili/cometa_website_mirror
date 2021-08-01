@@ -255,6 +255,18 @@ main {
     .text {
         padding: 0px;
         line-height: 24px;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            &.join {
+                color: $yellow-text-color;
+                border-bottom-color: $yellow-text-color;
+                padding-bottom: 3px;
+                margin-bottom: 10px;
+            }
+        }
         @include light-theme {
             color: $body-light-color;
         }
@@ -342,6 +354,8 @@ main {
         }
     }
 }
+
+
 
 .links {
 	display: flex;
