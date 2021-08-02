@@ -267,6 +267,20 @@ main .text a.join {
   padding-bottom: 3px;
   margin-bottom: 10px;
 }
+main .text a.join-button {
+  float: right;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #E2B154;
+  background-color: #E2B154;
+  color: black;
+}
+main .text a.join-button:hover {
+  border: 1px solid #E2B154;
+  background-color: black;
+  color: #E2B154;
+}
 html[theme=light] main .text {
   color: #343333;
 }
