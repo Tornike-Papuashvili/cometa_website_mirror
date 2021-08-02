@@ -424,6 +424,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 3em;
   padding: 50px 30px;
   background-color: #0D0D0D;
 }
