@@ -98,6 +98,10 @@ body {
 }
 
 h1 {
+    font-size: big;
+    font-weight: bold;
+}
+h2 {
     font-size: medium;
     font-weight: bold;
 }
@@ -424,6 +428,10 @@ footer {
     background-color: $footer-bg-color;
     @include light-theme {
         background-color: $body-light-color;
+    }
+    .footer-keywords {
+        padding: 50px;
+        color: #606060;
     }
     .metas {
         display: flex;
