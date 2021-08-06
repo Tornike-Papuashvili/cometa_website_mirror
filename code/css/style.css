@@ -305,6 +305,7 @@ html[theme=light] main .text {
 @media (min-width: 1200px) {
   main .text {
     padding-left: 5%;
+    padding-right: 20px;
     padding-top: 100px;
     width: 50vw;
   }
@@ -323,13 +324,15 @@ main .text .testimonials {
   margin-bottom: 25px;
 }
 main .text .testimonial {
-  padding: 50px 10px 10px 10px;
+  margin-bottom: 25px;
   font-family: "Times New roman";
+  padding: 10px 5px 5px 5px;
   border: 1px solid #E2B154;
   border-radius: 15px;
 }
 @media (min-width: 600px) {
   main .text .testimonial {
+    padding: 50px 10px 10px 10px;
     padding: 50px;
     padding-bottom: 25px;
   }
