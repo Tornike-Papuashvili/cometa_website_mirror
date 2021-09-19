@@ -53,14 +53,30 @@ i {
 
 [data-lang] {
   display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 2s linear;
 }
 
 html[cometa-lang=en] [data-lang=en] {
   display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 2s linear;
 }
 
 html[cometa-lang=de] [data-lang=de] {
   display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 2s linear;
+}
+
+html[cometa-lang=ca] [data-lang=ca] {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  transition: all 2s linear;
 }
 
 em {
@@ -170,6 +186,8 @@ html[theme=light] header .theme-switcher .switch .point {
   right: 20px;
 }
 header .theme-switcher .item {
+  width: 5vw;
+  text-align: center;
   cursor: pointer;
 }
 header .theme-switcher .item.selected {
@@ -180,7 +198,7 @@ header .language-switcher {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: text-highlighted-color;
+  color: #DADADA;
   padding-top: 10px;
 }
 header .language-switcher .separator {
@@ -188,6 +206,8 @@ header .language-switcher .separator {
 }
 header .language-switcher .lang {
   cursor: pointer;
+  color: #E2B154;
+  text-decoration: none;
 }
 header .language-switcher .lang.selected {
   color: #E2B154;
@@ -425,6 +445,9 @@ main .text .testimonial_from {
     height: 100vh;
     margin: 0;
   }
+}
+.links #donate {
+  margin-top: 150px;
 }
 
 /* UL FOOTER STYLE  */

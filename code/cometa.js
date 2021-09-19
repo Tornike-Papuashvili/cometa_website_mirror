@@ -7,18 +7,43 @@
 
 // Load saved language on load
 var initialLang = localStorage.getItem('lang');
-if (initialLang === 'en' || initialLang === 'de') {
+if (initialLang === 'en' || initialLang === 'de' || initialLang === 'ca') {
     changeLanguage(initialLang)
 }
-// Load saved theme on load
+
+function changeLanguage(lang) {
+    // Update DOM - set display to inline-block of selected language
+    document.documentElement.setAttribute('cometa-lang', lang);
+    // set localstorage item to selected language
+    localStorage.setItem('lang', lang);
+    // set CSS of selected langauge in header to reflect the selected langauge
+    try {
+        // Try removeing the attribute selected from language selector
+        document.getElementsByClassName('english')[0].classList.remove("selected")
+        document.getElementsByClassName('catalan')[0].classList.remove("selected")
+        document.getElementsByClassName('deutsch')[0].classList.remove("selected")
+    } catch (error) {
+        // Do nothing        
+    }
+    switch(lang) {
+        case "en":
+            document.getElementsByClassName('english')[0].classList.add("selected")
+            break;
+        case "de":
+            document.getElementsByClassName('deutsch')[0].classList.add("selected")
+            break;
+        case "ca":
+            document.getElementsByClassName('catalan')[0].classList.add("selected")
+            break;
+        default:
+            document.getElementsByClassName('english')[0].classList.add("selected")
+    }
+
+}
+//Load saved theme on load
 var initialTheme = localStorage.getItem('theme');
 if (initialTheme === 'light' || initialTheme === 'dark') {
     changeTheme(initialTheme)
-}
-function changeLanguage(lang) {
-    // Update DOM
-    document.documentElement.setAttribute('cometa-lang', lang);
-    localStorage.setItem('lang', lang);
 }
 function changeTheme(theme) {
     if (theme) {
