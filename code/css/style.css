@@ -246,6 +246,15 @@ main .logo {
   background-size: cover;
   z-index: -9999;
 }
+
+main .text ul.media-links-list {
+  list-style-type: none;
+}
+
+main .text ul.media-links-list li { 
+  padding-top: 10px;
+}
+
 html[theme=light] main .logo {
   filter: invert(1);
 }
@@ -306,6 +315,11 @@ main .text a.join-button:hover {
   background-color: black;
   color: #E2B154;
 }
+
+main .text a.media-links {
+  color: #E2B154;
+}
+
 html[theme=light] main .text {
   color: #343333;
 }
