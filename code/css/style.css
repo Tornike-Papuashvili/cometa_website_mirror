@@ -186,10 +186,16 @@ html[theme=light] header .theme-switcher .switch .point {
   right: 20px;
 }
 header .theme-switcher .item {
-  width: 5vw;
   text-align: center;
   cursor: pointer;
 }
+
+@media (min-width: 900px) {
+  header .theme-switcher .item {
+    width: 5vw;
+  }
+}
+
 header .theme-switcher .item.selected {
   color: #DADADA;
   font-weight: 500;
