@@ -17,6 +17,7 @@ stage_deployment:
     - sudo mkdir -p /home/amvara/projects/cometa_website_stage || true
     - sudo cp -rp . /home/amvara/projects/cometa_website_stage/.
     - cd /home/amvara/projects/cometa_website_stage/
+    - sudo bash file-version-handler
     - sudo docker-compose up -d
   only:
     refs:
