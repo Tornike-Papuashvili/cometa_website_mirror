@@ -43,10 +43,10 @@ function  set_css_js_extension_version() {
 		# Check if file has been modified by sed
 		if [ -s changelog.txt ]; then
 			#inform user about successful tag replacment
-			echo "$(tput setaf 2)Tag has been found $(tput sgr0)in ${htmlFiles[$i]}, proceeding to replacment";
+			echo "Tag has been found in ${htmlFiles[$i]}, proceeding to replacment";
 		else
 			#inform user that tag has not been found in file
-			echo "$(tput setaf 1)Tag has not been found $(tput sgr0)in ${htmlFiles[$i]}"
+			echo "Tag has not been found in ${htmlFiles[$i]}"
 		fi
 
 		rm changelog.txt;
