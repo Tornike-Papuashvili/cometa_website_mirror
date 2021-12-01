@@ -17,6 +17,8 @@ stage_deployment:
     - sudo mkdir -p /home/amvara/projects/cometa_website_stage || true
     - sudo cp -rp . /home/amvara/projects/cometa_website_stage/.
     - cd /home/amvara/projects/cometa_website_stage/
+    # Related to #3301... Updating @@last_modified_date@@ with current timesamp using next script
+    - ./file-version-handler.sh
     - sudo docker-compose up -d
   only:
     refs:
