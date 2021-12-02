@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.@@last_modified_date@@.css">
+    <link rel="stylesheet" href="css/style.1638457596.css">
     <meta name="theme-color" content="#111111">
     <meta name="author" content="COMETA ROCKS S.L., Barcelona, Spain">
     <meta name="version" content="1.0">
@@ -14,13 +14,45 @@
     <link rel="icon" href="favicon.ico">
     <script src="https://js.stripe.com/v3/"></script>
     <script src="axios.min.js"></script>
-    <script src="costume-components/header.@@last_modified_date@@.js"></script>
-    <script src="costume-components/footer.@@last_modified_date@@.js"></script>
+    <script src="costume-components/header.1638457596.js"></script>
+    <script src="costume-components/footer.1638457596.js"></script>
     <title>Co.meta - no-code test automation made easy.</title>
 </head>
 <body>
     <div class="cometa_bg1"></div>
-    <header-component></header-component>
+    <!--<header-component></header-component>-->
+
+    <header>
+        <div class="logo">
+            <span>co.</span>
+            <span>meta</span>
+        </div>
+        <div>
+            <div class="theme-switcher">
+                <div class="item light" data-lang="en" onclick="changeTheme('light')">
+                Light
+                </div>
+                <div class="item light" data-lang="ca" onclick="changeTheme('light')">
+                Clar
+                </div>
+                <div class="switch" onclick="changeTheme()">
+                <div class="point right"></div>
+                </div>
+                <div class="item dark" data-lang="en" onclick="changeTheme('dark')">
+                Dark
+                </div>
+                <div class="item dark" data-lang="ca" onclick="changeTheme('dark')">
+                Fosc
+                </div>
+            </div>
+            <div class="language-switcher">
+                <a  class="lang english selected" onclick="changeLanguage('en')">EN</a>
+                <div class="separator">
+                |
+                </div><a class="lang catalan" onclick="changeLanguage('ca')">CA</a>
+            </div>
+        </div>
+    </header>
 
     <main>
         <div class="logo"></div>
@@ -226,7 +258,7 @@
         </div>
     </div>
     <footer-component></footer-component>
-    <script src="cometa.@@last_modified_date@@.js">
+    <script src="cometa.1638457596.js">
     </script>
 </body>
 </html>

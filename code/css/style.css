@@ -153,9 +153,24 @@ header {
   padding: 0 30px;
   transition: top 0.2s ease-in-out;
 }
+
 html[theme=light] header {
   background-color: #343333;
 }
+
+header .logo span {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+header .logo span:nth-child(1) {
+  color: #E2B154;
+}
+
+header .logo span:nth-child(2) {
+  color: gray;
+}
+
 header .theme-switcher {
   display: flex;
   justify-content: center;
