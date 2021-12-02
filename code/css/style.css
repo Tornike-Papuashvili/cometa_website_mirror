@@ -4,38 +4,38 @@
 /* Sizes, Margins, Paddings and Dimensions */
 /* Custom Fonts */
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-Regular.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 400;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-Thin.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 100;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-ExtraLight.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 200;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-Light.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 300;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-SemiBold.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 600;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-Bold.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 700;
 }
 @font-face {
-  font-family: Inter;
-  src: url(fonts/Inter-Medium.ttf);
+  font-family: Cometa-Rocks;
+  src: url(fonts/Comfortaa-VariableFont_wght.ttf);
   font-weight: 500;
 }
 * {
@@ -84,7 +84,7 @@ em {
 }
 
 body {
-  font-family: Inter, sans-serif;
+  font-family: Cometa-Rocks, sans-serif;
   font-weight: 200;
   font-size: 16px;
   background-color: #111111;
@@ -200,12 +200,12 @@ header .theme-switcher .switch .point {
 html[theme=light] header .theme-switcher .switch .point {
   right: 20px;
 }
-header .theme-switcher .item {
+header .theme-switcher .item {  
   text-align: center;
   cursor: pointer;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px) { 
   header .theme-switcher .item {
     width: 5vw;
   }
@@ -267,15 +267,6 @@ main .logo {
   background-size: cover;
   z-index: -9999;
 }
-
-main .text ul.media-links-list {
-  list-style-type: none;
-}
-
-main .text ul.media-links-list li { 
-  padding-top: 10px;
-}
-
 html[theme=light] main .logo {
   filter: invert(1);
 }
@@ -336,11 +327,6 @@ main .text a.join-button:hover {
   background-color: black;
   color: #E2B154;
 }
-
-main .text a.media-links {
-  color: #E2B154;
-}
-
 html[theme=light] main .text {
   color: #343333;
 }
