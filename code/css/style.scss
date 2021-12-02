@@ -164,6 +164,20 @@ header {
     @include light-theme {
         background-color: $body-light-color;
     }
+
+    .logo {
+        span {
+            font-size: 30px;
+            font-weight: 400;
+
+            &:nth-child(1) {
+                color: #E2B154;
+            }
+            &:nth-child(1) {
+                color: gray;
+            }
+        }
+    }    
     .theme-switcher {
         display: flex;
         justify-content: center;
